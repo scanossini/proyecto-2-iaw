@@ -1,4 +1,4 @@
-   Proyecto 2 - Ingenieria de Aplicaciones Web 2020 - Banco de sangre
+Proyecto 2 - Ingenieria de Aplicaciones Web 2020 - Banco de sangre
 
 Tipos de usuario
 Usuario editor: carga donantes y edita la cantidad de donaciones a su nombre disponibles en el banco.
