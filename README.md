@@ -8,7 +8,7 @@ Usuario administrador: alcances del editor y además puede cambiar los datos per
  
 Entidades
 
-Donantes: ID (PK), tipo de sangre, cantidad de donaciones disponibles, nombre, edad, sexo, ubicación.
+Donantes: ID (PK), tipo de sangre, cantidad de donaciones disponibles, nombre, edad, sexo, ubicación, foto.
 
 Tabla de contacto: ID (PK), persona (FK al ID del donante), tipo de contacto (mail/teléfono), valor.
 
