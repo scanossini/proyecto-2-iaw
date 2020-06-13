@@ -8,4 +8,8 @@ Usuario administrador: alcances del editor y además puede cambiar los datos per
  
 Entidades
 
-Donantes con tipo de sangre, cantidad de donaciones disponibles, nombre, edad, sexo, teléfono de contacto y ubicación. Las entidades se diferencian por el tipo de sangre que puede ser A+, A-, B+, B-, AB+, AB-, O+ y O-.
+Donantes: ID (PK), tipo de sangre, cantidad de donaciones disponibles, nombre, edad, sexo, ubicación.
+
+Tabla de contacto: ID (PK), persona (FK al ID del donante), tipo de contacto (mail/teléfono), valor.
+
+Relación 1:N de Donante a Tabla de contacto.
