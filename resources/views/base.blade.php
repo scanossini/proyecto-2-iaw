@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Créditos https://getbootstrap.com/docs/4.5/components/navbar/ -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
         crossorigin="anonymous">
@@ -19,14 +20,14 @@
             	@yield('leftside')
                 <ul class="navbar-nav ml-auto">
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" style="vertical-align:middle;" id="navbarSupportedContent">
 				    	<form class="form-inline ml-auto" method="GET" action="/search">
 				      		<div class="md-form my-0">
-			        		<input class="form-control mr-xl-2" type="text" style="text-align: center;" name="user" placeholder="Buscar">
+			        		<input class="form-control mr-md-2" type="text" style="text-align: center;" name="user" placeholder="Buscar">
 				    	  	</div>
 				    	</form>
 				 	 </div>
-
+                      <br>
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
