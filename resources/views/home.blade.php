@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>home</h1>
-</body>
-</html>
+@extends('base')
+
+@section('content')
+<div class="container">
+	<div class="display-1 text-muted text-center mt-5 pt-5">Welcome</div>
+</div>
+@endsection
