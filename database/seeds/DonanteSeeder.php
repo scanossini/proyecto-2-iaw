@@ -27,7 +27,7 @@ class DonanteSeeder extends Seeder
             'sexo' => 'f',
             'tipoSangre' => 'A-',
             'donacionesDisp' => 0,
-            'ubicacion' => 'cipolletti',
+            'ubicacion' => 'bahia blanca',
             'foto' => 'https://image.shutterstock.com/image-photo/female-worker-road-construction-260nw-724291249.jpg'
         ));
     }

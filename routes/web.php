@@ -13,5 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+Route::view('/', 'home')->middleware('auth');
+Route::view('home', 'home')->middleware('auth');
 
-Route::view('/', 'home');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
