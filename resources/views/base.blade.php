@@ -43,12 +43,9 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                            		<a class="dropdown-item" href="/profile">
+                            		<a class="dropdown-item" href=" {{ route('admin.users.index') }}">
                                     	Mi Perfil
                                 	</a>
-                                	<a class="dropdown-item" href="/edit_profile">
-                                        Editar Perfil
-                                    </a>
                                     <a class="dropdown-item" href="/readme">
                                         Readme
                                     </a>
@@ -67,11 +64,17 @@
                 </ul>
             </div>
         </div>
-	</nav>
+    </nav>
 
 	<div>
 		@yield('content')
     </div>
+    
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="footerText">Proyecto 2 Ingeniería de Aplicaciones Web 2020</span>
+        </div>
+    </footer>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

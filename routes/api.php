@@ -21,3 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('donante', 'DonantesController@list');
 Route::get('donante/{id}', 'DonantesController@get');
+Route::get('user', 'DonantesController@listU');

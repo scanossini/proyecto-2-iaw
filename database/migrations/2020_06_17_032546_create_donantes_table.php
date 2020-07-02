@@ -21,7 +21,7 @@ class CreateDonantesTable extends Migration
             $table->string('tipoSangre');
             $table->integer('donacionesDisp');
             $table->string('ubicacion');
-            $table->binary('foto');           
+            $table->binary('foto')->nullable();           
             $table->timestamps();
         });
     }

@@ -1,7 +1,28 @@
-@import url(https://fonts.googleapis.com/css?family=Pacifico|Roboto);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
 
 .headerFont{ 
     font-family: 'Pacifico', serif;
     font-size: 25px;
     color: blueviolet;
 }
+
+ #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: gray;
+  }
+
+  .footerText{
+      color: white;
+  }
