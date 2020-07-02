@@ -12,7 +12,7 @@
   }
   
   #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
+    padding-bottom: 2.5rem;
   }
   
   .footer {
@@ -25,4 +25,12 @@
 
   .footerText{
       color: white;
+  }
+
+  #linkGithub{
+    color: white;
+  }
+
+  .navbar {
+    margin-bottom: 10px;
   }

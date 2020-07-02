@@ -71,9 +71,26 @@
     </div>
     
     <footer class="footer mt-auto py-3">
-        <div class="container">
-            <span class="footerText">Proyecto 2 Ingeniería de Aplicaciones Web 2020</span>
+    <div class="container-fluid text-center text-md-left" style="background-color:gray;">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+            <h5 class="text-uppercase pb-3">Ingeniería de Aplicaciones Web</h5>
+            <p>Universidad Nacional del Sur</p>
+            <p>Primer cuatrimestre de 2020</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <div class="col-md-3 mb-md-0 mb-3">
+            <ul class="list-unstyled">
+              <li class="pb-4">
+                Stefano Canossini - LU 114.594
+              </li>
+              <li>
+                <a id="linkGithub" href="https://github.com/scanossini/" target="_blank">Perfil de GitHub</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </footer>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
