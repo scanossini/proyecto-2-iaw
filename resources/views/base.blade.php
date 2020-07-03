@@ -44,7 +44,10 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                             		<a class="dropdown-item" href=" {{ route('admin.users.index') }}">
-                                    	Mi Perfil
+                                    	Usuarios
+                                    </a>
+                                    <a class="dropdown-item" href="/donantes">
+                                    	Donantes
                                 	</a>
                                     <a class="dropdown-item" href="/readme">
                                         Readme

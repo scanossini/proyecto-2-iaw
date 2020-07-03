@@ -14,6 +14,9 @@ class RolesSeeder extends Seeder
     {
         Role::create(array(
             'name' => 'admin',
+        ));
+
+        Role::create(array(
             'name' => 'editor'
         ));
     }
