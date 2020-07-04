@@ -20,14 +20,15 @@ Route::view('/', 'home')->middleware('auth');
 
 Route::view('home', 'home')->middleware('auth');
 
+Route::get('logout', 'LoginController@logout');
+
 Route::get('/readme', function () {
     return view('appReadme');
 });
-
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
 Route::resource('/donantes', 'DonantesController');
+Route::put('/donantes/{donante}', 'DonantesController@update')->name('updateDonante');

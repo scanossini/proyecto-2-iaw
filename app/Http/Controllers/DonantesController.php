@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Donante;
 use App\User;
+use App\Contacto;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 
 class DonantesController extends Controller
@@ -29,7 +31,13 @@ class DonantesController extends Controller
      */
     public function edit(Donante $donante)
     {
-        //
+        if(Gate::denies('edit-users')){
+            return redirect('home');
+        }
+
+        return view('donantes.edit')->with([
+            'donante' => $donante
+        ]);
     }
 
     /**
@@ -41,7 +49,11 @@ class DonantesController extends Controller
      */
     public function update(Request $request, Donante $donante)
     {
-        //
+        $donante->nombre = $request->nombre;
+        $donante->donacionesDisp = $request->donacionesDisp;
+        $donante->save();
+
+        return redirect('donantes');
     }
 
     /**
@@ -52,7 +64,15 @@ class DonantesController extends Controller
      */
     public function destroy(Donante $donante)
     {
-        //
+        if(Gate::denies('delete-users')){
+            return redirect('home');
+        }
+
+        $donante->contactos()->delete();
+
+        $donante->delete();
+
+        return redirect('donantes');
     }
 
     public function list() {

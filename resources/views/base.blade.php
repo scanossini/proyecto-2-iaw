@@ -14,7 +14,7 @@
 		<div class="container">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-header">
-                <a class="navbar-brand headerFont" href="#">Banco de Sangre</a>
+                <a class="navbar-brand headerFont" href="/home">Banco de Sangre</a>
             </div>
 
             	@yield('leftside')
@@ -22,9 +22,9 @@
 
                     <div class="collapse navbar-collapse" style="vertical-align:middle;" id="navbarSupportedContent">
 				    	<form class="form-inline ml-auto" method="GET" action="/search">
-				      		<div class="md-form my-0">
-			        		<input class="form-control mr-md-2" type="text" style="text-align: center;" name="user" placeholder="Buscar">
-				    	  	</div>
+				      		<!-- <div class="md-form my-0">
+			        		<input class="form-control mr-md-2" type="text" style="text-align: center;" name="donante" placeholder="Buscar">
+				    	  	</div> -->
 				    	</form>
 				 	 </div>
                       <br>
@@ -46,7 +46,7 @@
                             		<a class="dropdown-item" href=" {{ route('admin.users.index') }}">
                                     	Usuarios
                                     </a>
-                                    <a class="dropdown-item" href="/donantes">
+                                    <a class="dropdown-item" href="donantes">
                                     	Donantes
                                 	</a>
                                     <a class="dropdown-item" href="/readme">
