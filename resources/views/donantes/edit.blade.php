@@ -5,24 +5,13 @@
 	<div class="row justify-content-center">
 	    <div class="col-md-8">
             <div class="card">
-                <div class="card-header align-center">Editar Usuario {{ $donante->nombre }}
+                <div class="card-header align-center">Editar Donante {{ $donante->nombre }}
                     <div class="card-body" style="background-color: white;">
                         <form action="{{ route('updateDonante', ['donante' => $donante]) }}" method="POST">
                             <div class="form-group row">
-                                <label for="donacionesDisp" class="col-md-2 col-form-label text-md-right">Donaciones Disponibles</label>
-                                <div class="col-md-6">
-                                    <input id="donacionesDisp" type="number" class="form-control @error('donacionesDisp') is-invalid @enderror" name="donacionesDisp" value="{{ $donante->donacionesDisp }}" required autocomplete="donacionesDisp" autofocus> 
-                                    @error('donacionesDisp')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="form-group row">
                                 <label for="nombre" class="col-md-2 col-form-label text-md-right">Nombre</label>
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ $donante->nombre }}" required autofocus> 
+                                    <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ $donante->nombre }}" required autocomplete="nombre" autofocus> 
                                     @error('nombre')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -31,10 +20,47 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="edad" class="col-md-2 col-form-label text-md-right">Edad</label>
+                                <div class="col-md-6">
+                                    <input id="edad" type="number" class="form-control @error('edad') is-invalid @enderror" name="nombre" value="{{ $donante->edad }}" required> 
+                                    @error('edad')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="sexo" class="col-md-2 col-form-label text-md-right">Sexo</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sexo" id="radioM" value="m" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Masculino
+                                        </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sexo" id="radioF" value="f">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Femenino
+                                        </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="tipoSangre" class="col-md-2 col-form-label text-md-right">Tipo de Sangre</label>
                                 <div class="col-md-6">
-                                    <input id="tipoSangre" type="text" class="form-control @error('tipoSangre') is-invalid @enderror" name="tipoSangre" value="{{ $donante->tipoSangre }}" required autofocus> 
+                                    <input id="tipoSangre" type="text" class="form-control @error('tipoSangre') is-invalid @enderror" name="tipoSangre" value="{{ $donante->tipoSangre }}" required> 
                                     @error('tipoSangre')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="donacionesDisp" class="col-md-2 col-form-label text-md-right">Donaciones Disponibles</label>
+                                <div class="col-md-6">
+                                    <input id="donacionesDisp" type="number" class="form-control @error('donacionesDisp') is-invalid @enderror" name="donacionesDisp" value="{{ $donante->donacionesDisp }}" required> 
+                                    @error('donacionesDisp')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -44,7 +70,7 @@
                             <div class="form-group row">
                                 <label for="Ubicacion" class="col-md-2 col-form-label text-md-right">Ubicacion</label>
                                 <div class="col-md-6">
-                                    <input id="Ubicacion" type="text" class="form-control @error('Ubicacion') is-invalid @enderror" name="Ubicacion" value="{{ $donante->ubicacion }}" required autofocus> 
+                                    <input id="Ubicacion" type="text" class="form-control @error('Ubicacion') is-invalid @enderror" name="Ubicacion" value="{{ $donante->ubicacion }}" required> 
                                     @error('Ubicacion')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

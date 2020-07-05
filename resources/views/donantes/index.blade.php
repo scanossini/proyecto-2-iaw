@@ -36,6 +36,7 @@
                           </tbody>
                         </table>
                     </div>
+                    <a href="{{ route('createDonante') }}"><button type="button" class="btn btn-primary float-right">Añadir Donante</button></a>
                 </div>
             </div>
         </div>

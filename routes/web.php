@@ -31,4 +31,10 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 });
 
 Route::resource('/donantes', 'DonantesController');
+
 Route::put('/donantes/{donante}', 'DonantesController@update')->name('updateDonante');
+
+Route::get('/donantes/create', 'DonantesController@create')->name('createDonante');
+
+Route::post('/donantes/create', 'DonantesController@saveDonante')->name('saveDonante');
+

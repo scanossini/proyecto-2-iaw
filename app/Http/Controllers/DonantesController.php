@@ -49,8 +49,33 @@ class DonantesController extends Controller
      */
     public function update(Request $request, Donante $donante)
     {
+
         $donante->nombre = $request->nombre;
+        $donante->edad = $request->edad;
+        $donante->sexo = $request->sexo;
+        $donante->tipoSangre = $request->tipoSangre;
         $donante->donacionesDisp = $request->donacionesDisp;
+        $donante->ubicacion = $request->ubicacion;
+        $donante->save();
+
+        return redirect('donantes');
+    }
+
+    public function create()
+    {
+        return view('donantes/create');
+    }
+
+    public function saveDonante(Request $request)
+    {
+
+        $donante = new Donante;
+        $donante->nombre = $request->nombre;
+        $donante->edad = $request->edad;
+        $donante->sexo = $request->sexo;
+        $donante->tipoSangre = $request->tipoSangre;
+        $donante->donacionesDisp = $request->donacionesDisp;
+        $donante->ubicacion = $request->ubicacion;
         $donante->save();
 
         return redirect('donantes');
@@ -73,13 +98,6 @@ class DonantesController extends Controller
         $donante->delete();
 
         return redirect('donantes');
-    }
-
-    public function list() {
-        return Donante::get();
-    }
-    public function listU() {
-        return User::get();
     }
 
     public function get($id){

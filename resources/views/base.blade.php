@@ -46,7 +46,7 @@
                             		<a class="dropdown-item" href=" {{ route('admin.users.index') }}">
                                     	Usuarios
                                     </a>
-                                    <a class="dropdown-item" href="donantes">
+                                    <a class="dropdown-item" href="/donantes">
                                     	Donantes
                                 	</a>
                                     <a class="dropdown-item" href="/readme">
