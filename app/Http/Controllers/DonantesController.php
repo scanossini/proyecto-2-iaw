@@ -32,7 +32,9 @@ class DonantesController extends Controller
     public function edit(Donante $donante)
     {
         if(Gate::denies('edit-users')){
-            return redirect('home');
+            return view('donantes.editEditor')->with([
+                'donante' => $donante
+            ]);
         }
 
         return view('donantes.edit')->with([
@@ -56,6 +58,14 @@ class DonantesController extends Controller
         $donante->tipoSangre = $request->tipoSangre;
         $donante->donacionesDisp = $request->donacionesDisp;
         $donante->ubicacion = $request->ubicacion;
+        $donante->save();
+
+        return redirect('donantes');
+    }
+
+    public function updateEditor(Request $request, Donante $donante){
+        $donante->donacionesDisp = $request->donacionesDisp;
+        
         $donante->save();
 
         return redirect('donantes');
@@ -90,7 +100,7 @@ class DonantesController extends Controller
     public function destroy(Donante $donante)
     {
         if(Gate::denies('delete-users')){
-            return redirect('home');
+            return redirect('donantes');
         }
 
         $donante->contactos()->delete();

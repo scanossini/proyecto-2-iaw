@@ -33,6 +33,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 Route::resource('/donantes', 'DonantesController');
 
 Route::put('/donantes/{donante}', 'DonantesController@update')->name('updateDonante');
+Route::put('/donantes/{donante}', 'DonantesController@updateEditor')->name('updateDonanteEditor');
 
 Route::get('/donantes/create', 'DonantesController@create')->name('createDonante');
 
