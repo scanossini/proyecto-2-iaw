@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header align-center">Crear un Donante
                     <div class="card-body" style="background-color: white;">
-                        <form action="{{ route('saveDonante') }}" method="POST">
+                        <form action="{{ route('saveDonante') }}" enctype="multipart/form-data" method="POST">
                             <div class="form-group row">
                                 <label for="nombre" class="col-md-2 col-form-label text-md-right">Nombre</label>
                                 <div class="col-md-6">
@@ -51,6 +51,12 @@
                                 <label for="ubicacion" class="col-md-2 col-form-label text-md-right">Ubicacion</label>
                                 <div class="col-md-6">
                                     <input id="ubicacion" type="text" class="form-control @error('ubicacion') is-invalid @enderror" name="ubicacion" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="foto" class="col-md-2 col-form-label text-md-right">Foto</label>
+                                <div class="col-md-6">
+                                    <input id="foto" type="file" class="form-control @error('foto') is-invalid @enderror" name="foto" required>
                                 </div>
                             </div>
                                 @csrf

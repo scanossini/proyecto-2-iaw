@@ -7,6 +7,8 @@ use App\User;
 use App\Contacto;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class DonantesController extends Controller
 {
@@ -58,6 +60,17 @@ class DonantesController extends Controller
         $donante->tipoSangre = $request->tipoSangre;
         $donante->donacionesDisp = $request->donacionesDisp;
         $donante->ubicacion = $request->ubicacion;
+
+        if ($request->hasFile('foto'))
+        {
+            $request->validate([
+                'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',    
+            ]);
+
+            $donante->foto = base64_encode(file_get_contents($request->foto));
+
+        }
+
         $donante->save();
 
         return redirect('donantes');
@@ -78,7 +91,6 @@ class DonantesController extends Controller
 
     public function saveDonante(Request $request)
     {
-
         $donante = new Donante;
         $donante->nombre = $request->nombre;
         $donante->edad = $request->edad;
@@ -86,6 +98,16 @@ class DonantesController extends Controller
         $donante->tipoSangre = $request->tipoSangre;
         $donante->donacionesDisp = $request->donacionesDisp;
         $donante->ubicacion = $request->ubicacion;
+
+        if ($request->hasFile('foto'))
+        {
+            $request->validate([
+                'foto' => 'file|image|max:5000',    
+            ]);
+
+            $donante->foto = base64_encode(file_get_contents($request->foto));
+        }
+
         $donante->save();
 
         return redirect('donantes');

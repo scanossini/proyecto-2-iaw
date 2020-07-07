@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('content')
-<div class="container">
+<div class="container">  
 	<div class="row justify-content-center">
 	    <div class="col-md-8">
             <div class="card">
@@ -13,6 +13,7 @@
                               <th scope="col">#</th>
                               <th scope="col">Nombre</th>
                               <th scope="col">Donaciones Disponibles</th>
+                              <th scope="col">Foto</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -21,6 +22,7 @@
                               <th scope="row">{{ $donante->id }}</th>
                               <td>{{ $donante->nombre }}</td>
                               <td>{{ $donante->donacionesDisp }}</td>
+                              <td><img src="data:image/jpg;base64, {{$donante->foto}}" class="img-fluid" alt=""></td>
                               <td>
                                 <a href="{{ route('donantes.edit', $donante->id) }}"><button type="button" class="btn btn-primary float-left">Editar</button></a>
                                 <form action="{{ route('donantes.destroy', $donante->id) }}" method="POST" class="float-left">
@@ -29,8 +31,7 @@
                                   <button type="submit" class="btn btn-danger" onclick="return confirm('Seguro que desea eliminar el donante?')">Eliminar</button>
                                 </form>
                               </td>
-                              
-                              </td>
+                  
                             </tr>
                         @endforeach
                           </tbody>
