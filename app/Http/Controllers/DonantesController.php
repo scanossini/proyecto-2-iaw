@@ -129,7 +129,21 @@ class DonantesController extends Controller
     }
 
     public function get($id){
-        return Donante::findOrFail($id);
+        if(Gate::allows('edit-users')){
+            return Donante::findOrFail($id);
+        }
+        else{
+            return view('API.notAllowed');
+        }
+    }
+
+    public function list(){
+        if(Gate::allows('edit-users')){
+            return Donante::all();
+        }
+        else{
+            return view('API.notAllowed');
+        }
     }
 
 

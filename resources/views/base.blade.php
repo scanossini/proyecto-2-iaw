@@ -52,6 +52,9 @@
                                     <a class="dropdown-item" href="/readme">
                                         Readme
                                     </a>
+                                    <a class="dropdown-item" href="/API">
+                                        API
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
