@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DonantesController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,13 +31,13 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
-Route::put('/donantes/{donante}', 'DonantesController@update')->name('updateDonante');
-/*Route::put('/donantes/{donante}', 'DonantesController@updateEditor')->name('updateDonanteEditor');*/
-
 Route::resource('/donantes', 'DonantesController');
-
 
 Route::get('/donantes/create', 'DonantesController@create')->name('createDonante');
 
 Route::post('/donantes/create', 'DonantesController@saveDonante')->name('saveDonante');
+
+Route::put('/donantes/{donante}', 'DonantesController@update')->name('updateDonante');
+
+
 

@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header align-center">Editar Donante {{ $donante->nombre }}
                     <div class="card-body" style="background-color: white;">
-                        <form action="{{ route('updateDonanteEditor', ['donante' => $donante]) }}" method="POST">
+                        <form action="{{ route('updateDonante', ['donante' => $donante]) }}" method="POST">
                              <div class="form-group row">
                                 <label for="donacionesDisp" class="col-md-2 col-form-label text-md-right">Donaciones Disponibles</label>
                                 <div class="col-md-6">

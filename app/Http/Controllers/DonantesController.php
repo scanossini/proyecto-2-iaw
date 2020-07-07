@@ -53,22 +53,25 @@ class DonantesController extends Controller
      */
     public function update(Request $request, Donante $donante)
     {
+        $donante->donacionesDisp = $request->donacionesDisp; 
 
-        $donante->nombre = $request->nombre;
-        $donante->edad = $request->edad;
-        $donante->sexo = $request->sexo;
-        $donante->tipoSangre = $request->tipoSangre;
-        $donante->donacionesDisp = $request->donacionesDisp;
-        $donante->ubicacion = $request->ubicacion;
+        if(Gate::allows('edit-users')){
+            $donante->nombre = $request->nombre;
+            $donante->edad = $request->edad;
+            $donante->sexo = $request->sexo;
+            $donante->tipoSangre = $request->tipoSangre;
+            $donante->donacionesDisp = $request->donacionesDisp;
+            $donante->ubicacion = $request->ubicacion;
 
-        if ($request->hasFile('foto'))
-        {
-            $request->validate([
-                'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',    
-            ]);
+            if ($request->hasFile('foto'))
+            {
+                $request->validate([
+                    'foto' => 'file|image|max:5000',    
+                ]);
 
-            $donante->foto = base64_encode(file_get_contents($request->foto));
+                $donante->foto = base64_encode(file_get_contents($request->foto));
 
+            }
         }
 
         $donante->save();
@@ -76,13 +79,6 @@ class DonantesController extends Controller
         return redirect('donantes');
     }
 
-    public function updateEditor(Request $request, Donante $donante){
-        $donante->donacionesDisp = $request->donacionesDisp;
-        
-        $donante->save();
-
-        return redirect('donantes');
-    }
 
     public function create()
     {
@@ -135,5 +131,6 @@ class DonantesController extends Controller
     public function get($id){
         return Donante::findOrFail($id);
     }
+
 
 }
