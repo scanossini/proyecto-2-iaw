@@ -7,7 +7,7 @@ use App\User;
 use App\Contacto;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 
 class DonantesController extends Controller
