@@ -27,9 +27,9 @@ Route::get('/readme', function () {
     return view('appReadme');
 });
 
-Route::get('/API','donantesController@list');
+Route::get('/API','DonantesController@list');
 
-Route::get('/API/{donante}','donantesController@get');
+Route::get('/API/{donante}','DonantesController@get');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
