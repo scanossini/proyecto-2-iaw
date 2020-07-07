@@ -45,6 +45,14 @@ class DonantesController extends Controller
         ]);
     }
 
+    public function getContactos(Donante $donante){
+        $contactos = $donante->contactos;
+        return view('donantes/contactos')->with([
+            'contactos' => $contactos,
+            'donante' => $donante
+        ]);
+    }
+
     /**
      * Update the specified resource in storage.
      *

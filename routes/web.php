@@ -42,3 +42,5 @@ Route::get('/donantes/create', 'DonantesController@create')->name('createDonante
 Route::post('/donantes/create', 'DonantesController@saveDonante')->name('saveDonante');
 
 Route::put('/donantes/{donante}', 'DonantesController@update')->name('updateDonante');
+
+Route::get('/donantes/{donante}/contactos', 'DonantesController@getContactos')->name('getContactos'); 

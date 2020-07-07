@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Contacto;
 
 class DonanteSeeder extends Seeder
-{   
+{ 
 
     /**
      * Run the database seeds.
@@ -13,7 +14,7 @@ class DonanteSeeder extends Seeder
 
 
     public function run()
-    {
+    {        
         App\Donante::create(array(
             'nombre' => 'donante1',
             'edad' => 18,
@@ -33,5 +34,6 @@ class DonanteSeeder extends Seeder
             'ubicacion' => 'bahia blanca',
             'foto' => null
         ));
+
     }
 }

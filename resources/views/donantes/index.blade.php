@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">  
 	<div class="row justify-content-center">
-	    <div class="col-md-8">
+	    <div class="col-md-9">
             <div class="card">
                 <div class="card-header align-center">Usuarios
                     <div class="card-body" style="background-color: white;">
@@ -24,6 +24,7 @@
                               <td>{{ $donante->donacionesDisp }}</td>
                               <td><img src="data:image/jpg;base64, {{$donante->foto}}" class="img-fluid" alt=""></td>
                               <td>
+                                <a href="{{ route('getContactos', $donante->id) }}"><button type="button" class="btn btn-success float-left">Contacto</button></a>
                                 <a href="{{ route('donantes.edit', $donante->id) }}"><button type="button" class="btn btn-primary float-left">Editar</button></a>
                                 <form action="{{ route('donantes.destroy', $donante->id) }}" method="POST" class="float-left">
                                   @csrf
