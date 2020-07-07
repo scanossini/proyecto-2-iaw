@@ -6,7 +6,10 @@
 
             <li>Usuario editor: carga donantes y edita la cantidad de donaciones a su nombre disponibles en el banco.</li>
 
-            <li>Usuario administrador: alcances del editor y además puede cambiar los datos personales del donante. </li>
+            <li>
+                Usuario administrador: alcances del editor y además puede cambiar los datos personales del donante.<br>
+                El usuario administrador puede también gestionar los roles de todos los usuarios y eliminarlos.
+            </li>
  
         </ul>
         
