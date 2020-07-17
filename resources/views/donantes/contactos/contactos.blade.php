@@ -19,12 +19,20 @@
                           <tr>
                               <th scope="row">{{ $contacto->tipoContacto }}</th>
                               <td>{{ $contacto->valorContacto }}</td>
+                              <td>
+                                <a href="{{ route('editContacto', [$donante, $contacto]) }}"><button type="button" class="btn btn-primary float-left">Editar</button></a>
+                                <form action="{{ route('destroyContacto',[$contacto, $donante]) }}" method="POST" class="float-left">
+                                  @csrf
+                                  {{ method_field('DELETE') }}
+                                  <button type="submit" class="btn btn-danger" onclick="return confirm('Seguro que desea eliminar el contacto?')">Eliminar</button>
+                                </form>
+                              </td>
                             </tr>
                         @endforeach
                           </tbody>
                         </table>
                     </div>
-                    <a href="{{ route('createDonante') }}"><button type="button" class="btn btn-primary float-right">Añadir Contacto</button></a>
+                    <a href="{{ route('createContacto', $donante->id) }}"><button type="button" class="btn btn-primary float-right">Añadir Contacto</button></a>
                 </div>
             </div>
         </div>

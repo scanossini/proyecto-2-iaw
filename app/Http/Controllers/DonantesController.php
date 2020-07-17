@@ -47,7 +47,7 @@ class DonantesController extends Controller
 
     public function getContactos(Donante $donante){
         $contactos = $donante->contactos;
-        return view('donantes/contactos')->with([
+        return view('donantes/contactos/contactos')->with([
             'contactos' => $contactos,
             'donante' => $donante
         ]);

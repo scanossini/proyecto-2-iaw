@@ -35,12 +35,32 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
-Route::resource('/donantes', 'DonantesController');
+Route::resource('/donantes', 'DonantesController')
+->middleware('auth');
 
-Route::get('/donantes/create', 'DonantesController@create')->name('createDonante');
+Route::get('/donantes/create', 'DonantesController@create')->name('createDonante')
+->middleware('auth');
 
-Route::post('/donantes/create', 'DonantesController@saveDonante')->name('saveDonante');
+Route::post('/donantes/create', 'DonantesController@saveDonante')->name('saveDonante')
+->middleware('auth');
 
-Route::put('/donantes/{donante}', 'DonantesController@update')->name('updateDonante');
+Route::put('/donantes/{donante}', 'DonantesController@update')->name('updateDonante')
+->middleware('auth');
 
-Route::get('/donantes/{donante}/contactos', 'DonantesController@getContactos')->name('getContactos'); 
+Route::get('/donantes/{donante}/contactos', 'DonantesController@getContactos')->name('getContactos')
+->middleware('auth');
+
+Route::get('/donantes/{donante}/contactos/create', 'ContactoController@create')->name('createContacto')
+->middleware('auth');
+
+Route::post('/donantes/{donante}/contactos/create', 'ContactoController@saveContacto')->name('saveContacto')
+->middleware('auth');
+
+Route::get('/donantes/{donante}/contactos/{contacto}', 'ContactoController@edit')->name('editContacto')
+->middleware('auth');
+
+Route::put('/donantes/{donante}/contactos/{contacto}', 'ContactoController@update')->name('updateContacto')
+->middleware('auth');
+
+Route::delete('/donantes/{donante}/contactos/{contacto}', 'ContactoController@destroy')->name('destroyContacto')
+->middleware('auth');
