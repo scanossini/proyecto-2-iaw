@@ -22,7 +22,7 @@
                             <div class="form-group row">
                                 <label for="edad" class="col-md-2 col-form-label text-md-right">Edad</label>
                                 <div class="col-md-6">
-                                    <input id="edad" type="number" class="form-control @error('edad') is-invalid @enderror" name="nombre" value="{{ $donante->edad }}" required> 
+                                    <input id="edad" type="number" class="form-control @error('edad') is-invalid @enderror" name="edad" value="{{ $donante->edad }}" required> 
                                     @error('edad')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
