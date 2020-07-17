@@ -70,7 +70,7 @@
                             <div class="form-group row">
                                 <label for="Ubicacion" class="col-md-2 col-form-label text-md-right">Ubicacion</label>
                                 <div class="col-md-6">
-                                    <input id="ubicacion" type="text" class="form-control @error('Ubicacion') is-invalid @enderror" name="Ubicacion" value="{{ $donante->ubicacion }}" required> 
+                                    <input id="ubicacion" type="text" class="form-control @error('Ubicacion') is-invalid @enderror" name="ubicacion" value="{{ $donante->ubicacion }}" required> 
                                     @error('Ubicacion')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
