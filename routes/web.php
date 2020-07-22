@@ -64,3 +64,7 @@ Route::put('/donantes/{donante}/contactos/{contacto}', 'ContactoController@updat
 
 Route::delete('/donantes/{donante}/contactos/{contacto}', 'ContactoController@destroy')->name('destroyContacto')
 ->middleware('auth');
+
+Route::view('/spa', function() {
+    return view('spa');
+});
