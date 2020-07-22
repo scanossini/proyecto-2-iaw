@@ -21,6 +21,8 @@ Route::view('/', 'home')->middleware('auth');
 
 Route::view('home', 'home')->middleware('auth');
 
+Route::view('/spa', 'spa')->middleware('auth');
+
 Route::get('logout', 'LoginController@logout');
 
 Route::get('/readme', function () {
@@ -64,7 +66,3 @@ Route::put('/donantes/{donante}/contactos/{contacto}', 'ContactoController@updat
 
 Route::delete('/donantes/{donante}/contactos/{contacto}', 'ContactoController@destroy')->name('destroyContacto')
 ->middleware('auth');
-
-Route::view('/spa', function() {
-    return view('spa');
-});

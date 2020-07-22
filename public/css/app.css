@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito|Pacifico);
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -66,12 +65,9 @@ section {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 130vh;
   margin: 0;
   font-family: "Nunito", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
   color: #212529;
@@ -508,10 +504,8 @@ mark,
 }
 
 .img-fluid {
-  max-width: 50%;
-  max-height: 50%;
-  /*max-width: 100%;
-  height: auto;*/
+  max-width: 100%;
+  height: auto;
 }
 
 .img-thumbnail {
@@ -2334,7 +2328,6 @@ textarea.form-control {
   position: relative;
   display: block;
   padding-left: 1.25rem;
-  margin-left: 15px;
 }
 
 .form-check-input {
@@ -2662,7 +2655,6 @@ textarea.form-control.is-invalid {
 }
 
 .btn {
-  margin-right: 5px;
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -4537,7 +4529,6 @@ input[type=button].btn-block {
 }
 
 .navbar {
-  margin-bottom: 10px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -10937,28 +10928,3 @@ a.text-dark:focus {
   }
 }
 
-.headerFont{ 
-  font-family: 'Pacifico', serif;
-  font-size: 25px;
-  color: blueviolet;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;
-}
-
-.footerText{
-  color: white;
-}
-
-.footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 114px;
-  background-color: gray;
-}
-
-#linkGithub{
-  color: white;
-}
