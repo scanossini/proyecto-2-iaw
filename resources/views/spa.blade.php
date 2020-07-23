@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('base')
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React</title>
+    <title>Proyecto 3</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
+@section('content')
+
 <body>
     <div id="example">
     </div>
@@ -13,4 +13,5 @@
     
     
 </body>
-</html>
+
+@endsection
