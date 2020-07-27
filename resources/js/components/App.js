@@ -27,7 +27,7 @@ export default class App extends Component {
   }
   render() {  
       return (
-            <ul>
+            <ul className="list-group">
               {this.state.donantes.map(function(item, index) {
                 return(
                   <div key={index}>
