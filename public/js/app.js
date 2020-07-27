@@ -69952,10 +69952,9 @@ var App = /*#__PURE__*/function (_Component) {
         console.log(_this2.state.donantes);
 
         for (var i = 0; i < _this2.state.donantes.length; i++) {
-          content = _this2.state.donantes[i].nombre;
           element = document.createElement('div');
           element.className = 'card';
-          element.textContent = content;
+          element.textContent = 'Nombre: ' + _this2.state.donantes[i].nombre + "\n" + 'Edad: ' + _this2.state.donantes[i].edad + "\n" + 'Tipo de sangre: ' + _this2.state.donantes[i].tipoSangre + "\n" + 'Donaciones disponibles: ' + _this2.state.donantes[i].donacionesDisp + "\n";
           container.appendChild(element); //console.log((this.state.donantes[i]).nombre);    
         }
       });
