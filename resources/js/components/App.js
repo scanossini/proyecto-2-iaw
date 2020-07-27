@@ -8,8 +8,8 @@ var content, element, container;
 container = document.getElementById('react-app');
 
 const photoStyle = {
-  width: '20px',
-  height: '20px'
+  width: '100x',
+  height: '100px'
 }
 
 export default class App extends Component {
@@ -41,7 +41,7 @@ export default class App extends Component {
                     <h6>Tipo de Sangre: {item.tipoSangre}</h6>
                     <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
                     <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt=""  />
-                    <br />
+                    <br /> <br />
                   </div>
                 )
               }

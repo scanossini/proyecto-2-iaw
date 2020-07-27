@@ -69908,8 +69908,8 @@ var API_URL = 'https://proyecto-2-iaw.herokuapp.com';
 var content, element, container;
 container = document.getElementById('react-app');
 var photoStyle = {
-  width: '20px',
-  height: '20px'
+  width: '100x',
+  height: '100px'
 };
 
 var App = /*#__PURE__*/function (_Component) {
@@ -69967,7 +69967,7 @@ var App = /*#__PURE__*/function (_Component) {
           className: "img-fluid",
           style: photoStyle,
           alt: ""
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       }));
     }
   }]);
