@@ -43,7 +43,7 @@ export default class App extends Component {
                     <h6>Tipo de Sangre: {item.tipoSangre}</h6>
                     <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
                     <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt=""  />
-                    <br /> <br />
+                    <br />
                   </div>
                 )
               }

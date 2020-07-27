@@ -69969,7 +69969,7 @@ var App = /*#__PURE__*/function (_Component) {
           className: "img-fluid",
           style: photoStyle,
           alt: ""
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       }));
     }
   }]);
