@@ -32,7 +32,7 @@ export default class App extends Component {
   }
   render() {  
       return (
-            <ul className="list-group">
+            <ul className="ulStyle">
               {this.state.donantes.map(function(item, index) {
                 return(
                   <div key={index}>
