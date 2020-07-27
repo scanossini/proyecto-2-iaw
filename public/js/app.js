@@ -69954,26 +69954,23 @@ var App = /*#__PURE__*/function (_Component) {
         for (var i = 0; i < _this2.state.donantes.length; i++) {
           element = document.createElement('div');
           element.className = 'card';
-          element.textContent = 'Nombre: ' + _this2.state.donantes[i].nombre + "\n" + 'Edad: ' + _this2.state.donantes[i].edad + "\n" + 'Tipo de sangre: ' + _this2.state.donantes[i].tipoSangre + "\n" + 'Donaciones disponibles: ' + _this2.state.donantes[i].donacionesDisp + "\n";
+          element.textContent = 'Nombre: ' + _this2.state.donantes[i].nombre + /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null) + 'Edad: ' + _this2.state.donantes[i].edad + /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null) + 'Tipo de sangre: ' + _this2.state.donantes[i].tipoSangre + /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null) + 'Donaciones disponibles: ' + _this2.state.donantes[i].donacionesDisp + /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null);
           container.appendChild(element); //console.log((this.state.donantes[i]).nombre);    
         }
       });
     }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-body"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        className: "card-title"
-      }, "Steve Jobs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-        className: "card-subtitle mb-2 text-muted"
-      }, "steve@apple.com"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "card-text"
-      }, "Stay Hungry, Stay Foolish")));
-    }
+    /*render() {  
+        return (
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Steve Jobs</h5>
+                  <h6 className="card-subtitle mb-2 text-muted">steve@apple.com</h6>
+                  <p className="card-text">Stay Hungry, Stay Foolish</p>
+                </div>
+              </div>
+            );
+        }*/
+
   }]);
 
   return App;

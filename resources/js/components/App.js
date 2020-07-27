@@ -28,17 +28,17 @@ export default class App extends Component {
             element = document.createElement('div');
             element.className = 'card';
             element.textContent =
-              'Nombre: '+ ((this.state.donantes[i]).nombre) + "\n" +
-              'Edad: ' + ((this.state.donantes[i]).edad) + "\n" +
-              'Tipo de sangre: ' + ((this.state.donantes[i]).tipoSangre) + "\n" +
-              'Donaciones disponibles: ' + ((this.state.donantes[i]).donacionesDisp) + "\n"
+              'Nombre: '+ ((this.state.donantes[i]).nombre) + <br /> +
+              'Edad: ' + ((this.state.donantes[i]).edad) + <br /> +
+              'Tipo de sangre: ' + ((this.state.donantes[i]).tipoSangre) + <br /> +
+              'Donaciones disponibles: ' + ((this.state.donantes[i]).donacionesDisp) + <br />
              ;        
             container.appendChild(element);
             //console.log((this.state.donantes[i]).nombre);    
         }
       })
   }
-  render() {  
+  /*render() {  
       return (
             <div className="card">
               <div className="card-body">
@@ -48,7 +48,7 @@ export default class App extends Component {
               </div>
             </div>
           );
-      }
+      }*/
 }
 
 //export default App;
