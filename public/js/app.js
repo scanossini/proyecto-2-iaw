@@ -69950,8 +69950,7 @@ var App = /*#__PURE__*/function (_Component) {
         console.log(_this2.state.donantes);
 
         for (var i = 0; i < _this2.state.donantes.length; i++) {
-          var obj = _this2.state.donantes[i].nombre;
-          console.log(obj.id);
+          console.log(_this2.state.donantes[i].edad);
         }
       });
     }

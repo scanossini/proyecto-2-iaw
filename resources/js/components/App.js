@@ -22,9 +22,7 @@ export default class App extends Component {
             this.setState({ donantes: data })
             console.log(this.state.donantes)
             for(var i = 0; i < this.state.donantes.length; i++) {
-              var obj = this.state.donantes[i].nombre;
-          
-              console.log(obj.id);
+              console.log((this.state.donantes[i]).edad);    
           }
         })
     }

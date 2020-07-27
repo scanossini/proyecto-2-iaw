@@ -38,7 +38,16 @@
                             <div class="form-group row">
                                 <label for="tipoSangre" class="col-md-2 col-form-label text-md-right">Tipo de Sangre</label>
                                 <div class="col-md-6">
-                                    <input id="tipoSangre" type="text" class="form-control @error('tipoSangre') is-invalid @enderror" name="tipoSangre" required>
+                                    <select name="tipoSangre" id="tipoSangre" class="form-control @error('tipoSangre') is-invalid @enderror" required>
+                                        <option value="O-">O-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="A+">A+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="AB+">AB+</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">
