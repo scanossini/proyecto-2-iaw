@@ -69905,6 +69905,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var API_URL = 'https://proyecto-2-iaw.herokuapp.com';
+var content, element, container;
+container = document.getElementById('react-app');
 
 var App = /*#__PURE__*/function (_Component) {
   _inherits(App, _Component);
@@ -69950,7 +69952,11 @@ var App = /*#__PURE__*/function (_Component) {
         console.log(_this2.state.donantes);
 
         for (var i = 0; i < _this2.state.donantes.length; i++) {
-          console.log(_this2.state.donantes[i].nombre);
+          content = _this2.state.donantes[i].nombre;
+          element = document.createElement('div');
+          element.className = 'card' + i;
+          element.textContent = content;
+          container.appendChild(element); //console.log((this.state.donantes[i]).nombre);    
         }
       });
     }
