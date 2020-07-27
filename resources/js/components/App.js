@@ -36,12 +36,12 @@ export default class App extends Component {
               {this.state.donantes.map(function(item, index) {
                 return(
                   <div key={index}>
+                    <br />
                     <h5>{item.nombre}</h5>
                     <h6>Edad: {item.edad}</h6>
                     <h6>Tipo de Sangre: {item.tipoSangre}</h6>
                     <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
                     <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt=""  />
-                    <br />
                   </div>
                 )
               }
