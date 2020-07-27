@@ -17,7 +17,7 @@
                             <div class="form-group row">
                                 <label for="edad" class="col-md-2 col-form-label text-md-right">Edad</label>
                                 <div class="col-md-6">
-                                    <input id="edad" type="number" class="form-control @error('edad') is-invalid @enderror" name="edad" required>
+                                    <input id="edad" type="number" class="form-control @error('edad') is-invalid @enderror" min="16" name="edad" required>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -53,7 +53,7 @@
                             <div class="form-group row">
                                 <label for="donacionesDisp" class="col-md-2 col-form-label text-md-right">Donaciones Disponibles</label>
                                 <div class="col-md-6">
-                                    <input id="donacionesDisp" type="number" class="form-control @error('donacionesDisp') is-invalid @enderror" name="donacionesDisp" required> 
+                                    <input id="donacionesDisp" type="number" class="form-control @error('donacionesDisp') is-invalid @enderror" min="0" name="donacionesDisp" required> 
                                 </div>
                             </div>
                             <div class="form-group row">
