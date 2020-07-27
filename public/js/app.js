@@ -69961,7 +69961,8 @@ var App = /*#__PURE__*/function (_Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, item.nombre), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Edad: ", item.edad), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Tipo de Sangre: ", item.tipoSangre), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Donaciones Disponibles: ", item.donacionesDisp), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: "data:image/jpeg;base64,".concat(item.foto),
           className: "img-fluid",
-          alt: ""
+          alt: "",
+          style: "width: 20%; height: 20%"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       }));
     }
