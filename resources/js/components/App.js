@@ -40,11 +40,18 @@ export default class App extends Component {
   }
   render() {  
       return (
-            <div className="card">
-              <div className="card-body">
-                
-              </div>
-            </div>
+            <ul>
+              {this.state.donantes.map(function(item, index) {
+                return(
+                  <div key={index}>
+                    <h1>{item.nombre}</h1>
+                    <h2>{item.tipoSangre}</h2>
+                    <h2>{item.donacionesDisp}</h2>
+                  </div>
+                )
+              }
+              )}
+            </ul>
           );
       }
 }
