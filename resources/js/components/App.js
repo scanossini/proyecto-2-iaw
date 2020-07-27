@@ -9,7 +9,9 @@ container = document.getElementById('react-app');
 
 const photoStyle = {
   width: '100x',
-  height: '100px'
+  height: '100px',
+  objectFit: 'cover',
+  borderRadius: '50%'
 }
 
 export default class App extends Component {

@@ -69909,7 +69909,9 @@ var content, element, container;
 container = document.getElementById('react-app');
 var photoStyle = {
   width: '100x',
-  height: '100px'
+  height: '100px',
+  objectFit: 'cover',
+  borderRadius: '50%'
 };
 
 var App = /*#__PURE__*/function (_Component) {
