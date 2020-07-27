@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import axios from 'axios';
-import ListDonantes from './ListDonantes'
+
 const API_URL = 'https://proyecto-2-iaw.herokuapp.com';
-var content, element, container;
-container = document.getElementById('react-app');
+var container = document.getElementById('react-app');
 
 const photoStyle = {
   width: '100x',
