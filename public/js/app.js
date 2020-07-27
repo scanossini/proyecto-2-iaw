@@ -69950,13 +69950,18 @@ var App = /*#__PURE__*/function (_Component) {
         });
 
         console.log(_this2.state.donantes);
-
-        for (var i = 0; i < _this2.state.donantes.length; i++) {
+        /*for(var i = 0; i < this.state.donantes.length; i++) {
           element = document.createElement('div');
           element.className = 'card';
-          element.textContent = 'Nombre: ' + _this2.state.donantes[i].nombre + /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null) + 'Edad: ' + _this2.state.donantes[i].edad + /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null) + 'Tipo de sangre: ' + _this2.state.donantes[i].tipoSangre + /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null) + 'Donaciones disponibles: ' + _this2.state.donantes[i].donacionesDisp + /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null);
-          container.appendChild(element); //console.log((this.state.donantes[i]).nombre);    
-        }
+          element.textContent =
+            'Nombre: '+ ((this.state.donantes[i]).nombre) + <br /> +
+            'Edad: ' + ((this.state.donantes[i]).edad) + <br /> +
+            'Tipo de sangre: ' + ((this.state.donantes[i]).tipoSangre) + <br /> +
+            'Donaciones disponibles: ' + ((this.state.donantes[i]).donacionesDisp) + <br />
+           ;        
+          container.appendChild(element);
+          //console.log((this.state.donantes[i]).nombre);    
+        }*/
       });
     }
   }, {

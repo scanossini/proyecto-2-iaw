@@ -24,7 +24,7 @@ export default class App extends Component {
       .then((data) => {
           this.setState({ donantes: data })
           console.log(this.state.donantes)
-          for(var i = 0; i < this.state.donantes.length; i++) {
+          /*for(var i = 0; i < this.state.donantes.length; i++) {
             element = document.createElement('div');
             element.className = 'card';
             element.textContent =
@@ -35,7 +35,7 @@ export default class App extends Component {
              ;        
             container.appendChild(element);
             //console.log((this.state.donantes[i]).nombre);    
-        }
+        }*/
       })
   }
   render() {  
