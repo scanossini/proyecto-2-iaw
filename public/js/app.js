@@ -69954,7 +69954,7 @@ var App = /*#__PURE__*/function (_Component) {
         for (var i = 0; i < _this2.state.donantes.length; i++) {
           content = _this2.state.donantes[i].nombre;
           element = document.createElement('div');
-          element.className = 'card' + i;
+          element.className = 'card';
           element.textContent = content;
           container.appendChild(element); //console.log((this.state.donantes[i]).nombre);    
         }

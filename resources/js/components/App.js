@@ -29,7 +29,7 @@ export default class App extends Component {
             element = document.createElement('div');
             element.className = 'card';
             element.textContent = content;        
-            container.appendChild( element );
+            container.appendChild(element);
             //console.log((this.state.donantes[i]).nombre);    
         }
       })
