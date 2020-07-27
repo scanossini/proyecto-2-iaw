@@ -25,10 +25,14 @@ export default class App extends Component {
           this.setState({ donantes: data })
           console.log(this.state.donantes)
           for(var i = 0; i < this.state.donantes.length; i++) {
-            content = (this.state.donantes[i]).nombre;
             element = document.createElement('div');
             element.className = 'card';
-            element.textContent = content;        
+            element.textContent =
+              'Nombre: '+ ((this.state.donantes[i]).nombre) + "\n" +
+              'Edad: ' + ((this.state.donantes[i]).edad) + "\n" +
+              'Tipo de sangre: ' + ((this.state.donantes[i]).tipoSangre) + "\n" +
+              'Donaciones disponibles: ' + ((this.state.donantes[i]).donacionesDisp) + "\n"
+             ;        
             container.appendChild(element);
             //console.log((this.state.donantes[i]).nombre);    
         }
