@@ -27,7 +27,7 @@ export default class App extends Component {
           for(var i = 0; i < this.state.donantes.length; i++) {
             content = (this.state.donantes[i]).nombre;
             element = document.createElement('div');
-            element.className = 'card' + i;
+            element.className = 'card';
             element.textContent = content;        
             container.appendChild( element );
             //console.log((this.state.donantes[i]).nombre);    
