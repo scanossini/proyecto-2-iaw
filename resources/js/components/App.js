@@ -8,8 +8,8 @@ var content, element, container;
 container = document.getElementById('react-app');
 
 const photoStyle = {
-  width: '20%',
-  height: '20%'
+  width: '20px',
+  height: '20px'
 }
 
 export default class App extends Component {

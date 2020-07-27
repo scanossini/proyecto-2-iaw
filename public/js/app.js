@@ -69908,8 +69908,8 @@ var API_URL = 'https://proyecto-2-iaw.herokuapp.com';
 var content, element, container;
 container = document.getElementById('react-app');
 var photoStyle = {
-  width: '20%',
-  height: '20%'
+  width: '20px',
+  height: '20px'
 };
 
 var App = /*#__PURE__*/function (_Component) {
