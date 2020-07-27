@@ -44,9 +44,10 @@ export default class App extends Component {
               {this.state.donantes.map(function(item, index) {
                 return(
                   <div key={index}>
-                    <h1>{item.nombre}</h1>
-                    <h2>{item.tipoSangre}</h2>
-                    <h2>{item.donacionesDisp}</h2>
+                    <h5>Nombre: {item.nombre}</h5>
+                    <h6>Edad: {item.edad}</h6>
+                    <h6>Tipo de Sangre: {item.tipoSangre}</h6>
+                    <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
                   </div>
                 )
               }
