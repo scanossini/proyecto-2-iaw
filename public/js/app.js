@@ -69948,20 +69948,6 @@ var App = /*#__PURE__*/function (_Component) {
         _this2.setState({
           donantes: data
         });
-
-        console.log(_this2.state.donantes);
-        /*for(var i = 0; i < this.state.donantes.length; i++) {
-          element = document.createElement('div');
-          element.className = 'card';
-          element.textContent =
-            'Nombre: '+ ((this.state.donantes[i]).nombre) + <br /> +
-            'Edad: ' + ((this.state.donantes[i]).edad) + <br /> +
-            'Tipo de sangre: ' + ((this.state.donantes[i]).tipoSangre) + <br /> +
-            'Donaciones disponibles: ' + ((this.state.donantes[i]).donacionesDisp) + <br />
-           ;        
-          container.appendChild(element);
-          //console.log((this.state.donantes[i]).nombre);    
-        }*/
       });
     }
   }, {
@@ -69970,18 +69956,13 @@ var App = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.state.donantes.map(function (item, index) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: index
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Nombre: ", item.nombre), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Edad: ", item.edad), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Tipo de Sangre: ", item.tipoSangre), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Donaciones Disponibles: ", item.donacionesDisp));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, item.nombre), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Edad: ", item.edad), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Tipo de Sangre: ", item.tipoSangre), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Donaciones Disponibles: ", item.donacionesDisp), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       }));
     }
   }]);
 
   return App;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-/*<h5 className="card-title">Steve Jobs</h5>
-                <h6 className="card-subtitle mb-2 text-muted">steve@apple.com</h6>
-                <p className="card-text">Stay Hungry, Stay Foolish</p>*/
-//export default App;
-
 
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('react-app'));

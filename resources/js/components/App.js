@@ -23,19 +23,6 @@ export default class App extends Component {
       axios.get(url).then(response => response.data)
       .then((data) => {
           this.setState({ donantes: data })
-          console.log(this.state.donantes)
-          /*for(var i = 0; i < this.state.donantes.length; i++) {
-            element = document.createElement('div');
-            element.className = 'card';
-            element.textContent =
-              'Nombre: '+ ((this.state.donantes[i]).nombre) + <br /> +
-              'Edad: ' + ((this.state.donantes[i]).edad) + <br /> +
-              'Tipo de sangre: ' + ((this.state.donantes[i]).tipoSangre) + <br /> +
-              'Donaciones disponibles: ' + ((this.state.donantes[i]).donacionesDisp) + <br />
-             ;        
-            container.appendChild(element);
-            //console.log((this.state.donantes[i]).nombre);    
-        }*/
       })
   }
   render() {  
@@ -44,10 +31,11 @@ export default class App extends Component {
               {this.state.donantes.map(function(item, index) {
                 return(
                   <div key={index}>
-                    <h5>Nombre: {item.nombre}</h5>
+                    <h5>{item.nombre}</h5>
                     <h6>Edad: {item.edad}</h6>
                     <h6>Tipo de Sangre: {item.tipoSangre}</h6>
                     <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
+                    <br />
                   </div>
                 )
               }
@@ -56,9 +44,5 @@ export default class App extends Component {
           );
       }
 }
-/*<h5 className="card-title">Steve Jobs</h5>
-                <h6 className="card-subtitle mb-2 text-muted">steve@apple.com</h6>
-                <p className="card-text">Stay Hungry, Stay Foolish</p>*/
-//export default App;
 
 ReactDOM.render(<App />, document.getElementById('react-app'))
