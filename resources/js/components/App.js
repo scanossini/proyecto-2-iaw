@@ -7,6 +7,11 @@ const API_URL = 'https://proyecto-2-iaw.herokuapp.com';
 var content, element, container;
 container = document.getElementById('react-app');
 
+const photoStyle = {
+  width: '20%',
+  height: '20%'
+}
+
 export default class App extends Component {
 
   state = {
@@ -35,7 +40,7 @@ export default class App extends Component {
                     <h6>Edad: {item.edad}</h6>
                     <h6>Tipo de Sangre: {item.tipoSangre}</h6>
                     <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
-                    <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" alt="" style="width: 20%; height: 20%"/>
+                    <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt=""  />
                     <br />
                   </div>
                 )
