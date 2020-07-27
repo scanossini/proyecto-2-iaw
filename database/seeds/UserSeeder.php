@@ -3,6 +3,8 @@
 use Illuminate\Database\Seeder;
 use App\User;
 use App\Role;
+use Illuminate\Support\Str;
+
 
 class UserSeeder extends Seeder
 {
@@ -20,12 +22,14 @@ class UserSeeder extends Seeder
             'name' => 'admin user',
             'email' => 'admin@admin.com',
             'password' => bcrypt('adminadmin'),
+            'api_token' => Str::random(60),
         ));
 
         $editor = User::create(array(
             'name' => 'editor user',
             'email' => 'editor@editor.com',
             'password' => bcrypt('editoreditor'),
+            'api_token' => Str::random(60),
         ));
 
         $admin->roles()->attach($adminRole);

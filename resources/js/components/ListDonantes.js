@@ -1,24 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+/*import React from 'react';
 
-function ListDonantes() {
-    return (
+export default class ListDonantes extends Component {
+    render() {
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-md-8">
                     <div className="card">
                         <div className="card-header">Donantes</div>
-
+                            
                         <div className="card-body">I'm an example component!</div>
                     </div>
                 </div>
             </div>
         </div>
-    );
+    
+    }
 }
 
-export default ListDonantes;
-
-if (document.getElementById('listDonantes')) {
-    ReactDOM.render(<listDonantes />, document.getElementById('listDonantes'));
-}
+/*if (document.getElementById('ListDonantes')) {
+    ReactDOM.render(<ListDonantes/>, document.getElementById('ListDonantes'));
+}*/

@@ -6,6 +6,12 @@
         crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    @auth
+    <meta name="api-token" content="{{Auth::user()->api_token}}">
+    @endauth
+
 </head>
 <body>
     <title>Proyecto 2</title>
