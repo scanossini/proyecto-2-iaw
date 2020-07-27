@@ -69962,20 +69962,20 @@ var App = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      /* return (
-             <div className="card">
-               <div className="card-body">
-                 <h5 className="card-title">Steve Jobs</h5>
-                 <h6 className="card-subtitle mb-2 text-muted">steve@apple.com</h6>
-                 <p className="card-text">Stay Hungry, Stay Foolish</p>
-               </div>
-             </div>
-           );*/
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card-body"
+      }));
     }
   }]);
 
   return App;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]); //export default App;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+/*<h5 className="card-title">Steve Jobs</h5>
+                <h6 className="card-subtitle mb-2 text-muted">steve@apple.com</h6>
+                <p className="card-text">Stay Hungry, Stay Foolish</p>*/
+//export default App;
 
 
 
