@@ -38,8 +38,8 @@ export default class App extends Component {
         }
       })
   }
-  /*render() {  
-      return (
+  render() {  
+     /* return (
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">Steve Jobs</h5>
@@ -47,8 +47,8 @@ export default class App extends Component {
                 <p className="card-text">Stay Hungry, Stay Foolish</p>
               </div>
             </div>
-          );
-      }*/
+          );*/
+      }
 }
 
 //export default App;
