@@ -66026,7 +66026,11 @@ var Busqueda = /*#__PURE__*/function (_Component) {
   _createClass(Busqueda, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Buscar donantes compatibles con donaciones disponibles", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Tipo de sangre del paciente a recibir la donaci\xF3n:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+        className: "textoBusqueda"
+      }, "Buscar donantes compatibles con donaciones disponibles."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+        className: "textoBusqueda"
+      }, "Tipo de sangre del paciente a recibir la donaci\xF3n:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         name: "tipoSangre",
         id: "tipoSangre",
         className: "form-control"

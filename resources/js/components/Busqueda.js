@@ -5,9 +5,10 @@ export default class Busqueda extends Component {
     render(){
         return(
             <div>
-                Buscar donantes compatibles con donaciones disponibles
                 <br />
-                Tipo de sangre del paciente a recibir la donación:
+                <h6 className="textoBusqueda">Buscar donantes compatibles con donaciones disponibles.</h6>
+                <br />
+                <h6 className="textoBusqueda">Tipo de sangre del paciente a recibir la donación:</h6>
                 <select name="tipoSangre" id="tipoSangre" className="form-control">
                     <option value="O-">O-</option>
                     <option value="O+">O+</option>

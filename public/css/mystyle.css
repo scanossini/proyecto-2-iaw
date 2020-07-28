@@ -93,3 +93,7 @@
     -webkit-columns: 2;
     -moz-columns: 2;
   }
+
+  .textoBusqueda{
+    text-align: center;
+  }
