@@ -66037,30 +66037,28 @@ var Busqueda = /*#__PURE__*/function (_Component) {
   _createClass(Busqueda, [{
     key: "handleChange",
     value: function handleChange(event) {
-      console.log("estado previo: " + this.state.value);
       this.setState({
         value: event.target.value
       });
-      console.log("nuevo estado: " + this.state.value);
     }
   }, {
     key: "handleSubmit",
     value: function handleSubmit(event) {
-      var str = "";
       console.log("estado que llega a submit: " + this.state.value);
-      str = this.buscarDonantesCompatibles(this.state.value, str);
+      var str = this.buscarDonantesCompatibles(this.state.value);
       alert(str);
       event.preventDefault();
     }
   }, {
     key: "buscarDonantesCompatibles",
-    value: function buscarDonantesCompatibles(tipoSangre, str) {
+    value: function buscarDonantesCompatibles(tipoSangre) {
       var compatibles = [];
       var i;
+      var str = "";
       compatibles = this.sangreCompatible(tipoSangre, compatibles);
 
       for (i = 0; i < compatibles.length; i++) {
-        str = compatibles[i] + " ";
+        str = str + compatibles[i] + " ";
       }
 
       console.log("largo del arreglo compatibles: " + compatibles.length);

@@ -14,25 +14,23 @@ export default class Busqueda extends Component {
     }
 
     handleChange(event) {
-        console.log("estado previo: " + this.state.value);
         this.setState({value: event.target.value});
-        console.log("nuevo estado: " + this.state.value);
       }
   
     handleSubmit(event) {
-        var str = "";
         console.log("estado que llega a submit: " + this.state.value);
-        str = this.buscarDonantesCompatibles(this.state.value, str);
+        var str = this.buscarDonantesCompatibles(this.state.value);
         alert(str);
         event.preventDefault();
     }
 
-    buscarDonantesCompatibles(tipoSangre, str){
+    buscarDonantesCompatibles(tipoSangre){
         var compatibles = [];
         var i;
+        var str = "";
         compatibles = this.sangreCompatible(tipoSangre, compatibles);
         for(i = 0; i < compatibles.length; i++){
-            str = compatibles[i] + " ";
+            str = str + compatibles[i] + " ";
         }
         console.log("largo del arreglo compatibles: " + compatibles.length);
         return str;
