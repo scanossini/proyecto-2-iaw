@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import axios from 'axios';
+import axios from 'axios'
+import Busqueda from './Busqueda'
 
 const API_URL = 'https://proyecto-2-iaw.herokuapp.com';
 var container = document.getElementById('react-app');
@@ -35,13 +36,18 @@ export default class App extends Component {
             <ul className="ulStyle">
               {this.state.donantes.map(function(item, index) {
                 return(
-                  <div key={index}>
-                    <h5>{item.nombre}</h5>
-                    <h6>Edad: {item.edad}</h6>
-                    <h6>Tipo de Sangre: {item.tipoSangre}</h6>
-                    <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
-                    <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt="" />
-                    <br />
+                  <div>
+                    <div key={index}>
+                      <h5>{item.nombre}</h5>
+                      <h6>Edad: {item.edad}</h6>
+                      <h6>Tipo de Sangre: {item.tipoSangre}</h6>
+                      <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
+                      <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt="" />
+                      <br />
+                    </div>
+                    <div>
+                      <Busqueda />
+                    </div>
                   </div>
                 )
               }
