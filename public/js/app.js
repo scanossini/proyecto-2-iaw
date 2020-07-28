@@ -66044,26 +66044,24 @@ var Busqueda = /*#__PURE__*/function (_Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(event) {
-      console.log("estado que llega a submit: " + this.state.value);
-      var str = this.buscarDonantesCompatibles(this.state.value);
+      var tiposCompatibles = [];
+      tiposCompatibles = this.sangreCompatible(this.state.value, tiposCompatibles);
+      var i;
+      var str = "";
+
+      for (i = 0; i < tiposCompatibles.length; i++) {
+        str = str + tiposCompatibles[i] + " ";
+      }
+
       alert(str);
       event.preventDefault();
     }
-  }, {
-    key: "buscarDonantesCompatibles",
-    value: function buscarDonantesCompatibles(tipoSangre) {
-      var compatibles = [];
-      var i;
-      var str = "";
-      compatibles = this.sangreCompatible(tipoSangre, compatibles);
+    /*buscarDonantesCompatibles(tipoSangre){
+        var compatibles = [];
+        compatibles = this.sangreCompatible(tipoSangre, compatibles);
+        return compatibles;
+    }*/
 
-      for (i = 0; i < compatibles.length; i++) {
-        str = str + compatibles[i] + " ";
-      }
-
-      console.log("largo del arreglo compatibles: " + compatibles.length);
-      return str;
-    }
   }, {
     key: "sangreCompatible",
     value: function sangreCompatible(tipoSangre, arr) {
