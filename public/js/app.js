@@ -66046,21 +66046,22 @@ var Busqueda = /*#__PURE__*/function (_Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(event) {
-      buscarDonantesCompatibles(this.state.value);
+      var str = "";
+      str = buscarDonantesCompatibles(this.state.value);
+      alert(str);
       event.preventDefault();
     }
   }, {
     key: "buscarDonantesCompatibles",
-    value: function buscarDonantesCompatibles(tipoSangre) {
+    value: function buscarDonantesCompatibles(tipoSangre, str) {
       var compatibles = [];
       compatibles = this.sangreCompatible(tipoSangre, compatibles);
-      var str = "";
 
       for (i = 0; i < compatibles.length; i++) {
         str = compatibles[i] + " ";
       }
 
-      alert(str);
+      return str;
     }
   }, {
     key: "sangreCompatible",
