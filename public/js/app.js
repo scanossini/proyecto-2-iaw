@@ -65961,7 +65961,7 @@ var App = /*#__PURE__*/function (_Component) {
           alt: ""
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Busqueda__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        donantesFromParent: this.state.donantes
+        donantesFromParent: this.state
       })));
     }
   }]);

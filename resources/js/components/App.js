@@ -48,7 +48,7 @@ export default class App extends Component {
             )}
           </ul>
           <div>
-            <Busqueda donantesFromParent={this.state.donantes}/>
+            <Busqueda donantesFromParent={this.state}/>
           </div>
         </div>
       );
