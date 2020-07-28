@@ -33,28 +33,28 @@ export default class App extends Component {
   }
   render() {  
       return (
-            <ul className="ulStyle">
-              {this.state.donantes.map(function(item, index) {
-                return(
-                  <div>
-                    <div key={index}>
-                      <h5>{item.nombre}</h5>
-                      <h6>Edad: {item.edad}</h6>
-                      <h6>Tipo de Sangre: {item.tipoSangre}</h6>
-                      <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
-                      <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt="" />
-                      <br />
-                    </div>
-                    <div>
-                      <Busqueda />
-                    </div>
-                  </div>
-                )
-              }
-              )}
-            </ul>
-          );
-      }
+        <div>
+          <ul className="ulStyle">
+            {this.state.donantes.map(function(item, index) {
+              return(
+                <div key={index}>
+                  <h5>{item.nombre}</h5>
+                  <h6>Edad: {item.edad}</h6>
+                  <h6>Tipo de Sangre: {item.tipoSangre}</h6>
+                  <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
+                  <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt="" />
+                  <br />
+                </div>
+              )
+            }
+            )}
+          </ul>
+          <div>
+            <Busqueda />
+          </div>
+        </div>
+      );
+  }
 }
 
 ReactDOM.render(<App />, document.getElementById('react-app'))
