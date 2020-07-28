@@ -66054,7 +66054,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
         }
       }
 
-      alert(str);
+      alert(donantes[0].nombre + " " + donantes[0].donacionesDisp + " " + donantes[0].tipoSangre);
       event.preventDefault();
     }
   }, {

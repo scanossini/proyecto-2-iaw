@@ -27,7 +27,7 @@ export default class Busqueda extends Component {
                     str = str + donantes[i].nombre + " ";
             }
         }
-        alert(str);
+        alert(donantes[0].nombre + " " + donantes[0].donacionesDisp + " " + donantes[0].tipoSangre);
         event.preventDefault();
     }
 
