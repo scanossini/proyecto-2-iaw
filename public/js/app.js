@@ -66046,8 +66046,60 @@ var Busqueda = /*#__PURE__*/function (_Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
+      buscarDonantesCompatibles(this.state.value);
       event.preventDefault();
+    }
+  }, {
+    key: "buscarDonantesCompatibles",
+    value: function buscarDonantesCompatibles(tipoSangre) {
+      var compatibles = [];
+      compatibles = this.sangreCompatible(tipoSangre, compatibles);
+      var str = "";
+
+      for (i = 0; i < compatibles.length; i++) {
+        str = compatibles[i] + " ";
+      }
+
+      alert(str);
+    }
+  }, {
+    key: "sangreCompatible",
+    value: function sangreCompatible(tipoSangre, arr) {
+      switch (tipoSangre) {
+        case 'A+':
+          arr = ['A+', 'A-', 'O+', 'O-'];
+          break;
+
+        case 'A-':
+          arr = ['A-', 'O-'];
+          break;
+
+        case 'B+':
+          arr = ['B+', 'B-', 'O+', 'O-'];
+          break;
+
+        case 'B-':
+          arr = ['B-', 'O-'];
+          break;
+
+        case 'AB+':
+          arr = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
+          break;
+
+        case 'AB-':
+          arr = ['A-', 'B-', 'AB-', 'O-'];
+          break;
+
+        case 'O+':
+          arr = ['O+', 'O-'];
+          break;
+
+        case 'O-':
+          arr = ['O-'];
+          break;
+      }
+
+      return arr;
     }
   }, {
     key: "render",
