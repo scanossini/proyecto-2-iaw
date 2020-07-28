@@ -30,7 +30,7 @@ export default class App extends Component {
       })
   }
   value = this.state.donantes;
-  render() {  
+  render(value) {  
       return (
         <div>
           <ul className="ulStyle">
@@ -49,7 +49,7 @@ export default class App extends Component {
             )}
           </ul>
           <div>
-            <Busqueda donantesFromParent={this.value}/>
+            <Busqueda donantesFromParent={value}/>
           </div>
         </div>
       );

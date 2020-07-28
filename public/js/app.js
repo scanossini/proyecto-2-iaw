@@ -65950,7 +65950,7 @@ var App = /*#__PURE__*/function (_Component) {
     }
   }, {
     key: "render",
-    value: function render() {
+    value: function render(value) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "ulStyle"
       }, this.state.donantes.map(function (item, index) {
@@ -65963,7 +65963,7 @@ var App = /*#__PURE__*/function (_Component) {
           alt: ""
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Busqueda__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        donantesFromParent: this.value
+        donantesFromParent: value
       })));
     }
   }]);
