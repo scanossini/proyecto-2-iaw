@@ -42,7 +42,7 @@ export default class App extends Component {
                   <h6>Edad: {item.edad}</h6>
                   <h6>Tipo de Sangre: {item.tipoSangre}</h6>
                   <h6>Donaciones Disponibles: {item.donacionesDisp}</h6>
-                
+                  <img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt="" />
                   <br />
                 </div>
               )
@@ -56,5 +56,5 @@ export default class App extends Component {
       );
   }
 }
-//<img src={`data:image/jpeg;base64,${item.foto}`} className="img-fluid" style={photoStyle} alt="" />
+
 ReactDOM.render(<App />, document.getElementById('react-app'))
