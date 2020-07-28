@@ -7,7 +7,7 @@ export default class Busqueda extends Component {
     constructor(props) {
         super(props);
         this.state = {value: ''};
-        donantes = this.props.donantesFromParent;
+        donantes = this.props.donantesFromParent.donantes;
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
