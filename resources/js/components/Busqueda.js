@@ -9,7 +9,7 @@ export default class Busqueda extends Component {
         this.state = {value: ''};
         donantes = this.props.donantesFromParent;
     
-     //  this.handleChange = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
   
@@ -36,7 +36,7 @@ export default class Busqueda extends Component {
                         <option value="AB+">AB+</option>
                     </select>
                     <br />
-                    <input type="submit" value="Buscar" />
+                    <input type="submit" value="Buscar" onChange={this.handleChange} />
                 </form>
             </div>
         )
