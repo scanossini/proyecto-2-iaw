@@ -65897,7 +65897,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var API_URL = 'https://proyecto-2-iaw.herokuapp.com';
-var container = document.getElementById('react-app');
+var value;
 var photoStyle = {
   width: '100x',
   height: '100px',
@@ -65946,6 +65946,7 @@ var App = /*#__PURE__*/function (_Component) {
           donantes: data
         });
       });
+      value = this.state.donantes;
     }
   }, {
     key: "render",
@@ -65961,7 +65962,9 @@ var App = /*#__PURE__*/function (_Component) {
           style: photoStyle,
           alt: ""
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Busqueda__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Busqueda__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        donantesFromParent: this.value
+      })));
     }
   }]);
 
@@ -66011,24 +66014,42 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+var donantes;
 
 var Busqueda = /*#__PURE__*/function (_Component) {
   _inherits(Busqueda, _Component);
 
   var _super = _createSuper(Busqueda);
 
-  function Busqueda() {
+  function Busqueda(props) {
+    var _this;
+
     _classCallCheck(this, Busqueda);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {
+      value: ''
+    };
+    donantes = _this.props.donantesFromParent; //  this.handleChange = this.handleChange.bind(this);
+
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Busqueda, [{
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      alert('A name was submitted: ' + this.state.value);
+      event.preventDefault();
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         className: "textoBusqueda"
-      }, "Buscar donantes compatibles con donaciones disponibles."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+      }, "Buscar donantes compatibles con donaciones disponibles."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         className: "textoBusqueda"
       }, "Tipo de sangre del paciente a recibir la donaci\xF3n:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         name: "tipoSangre",
@@ -66050,7 +66071,10 @@ var Busqueda = /*#__PURE__*/function (_Component) {
         value: "AB-"
       }, "AB-"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "AB+"
-      }, "AB+")));
+      }, "AB+")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        value: "Buscar"
+      })));
     }
   }]);
 
