@@ -12,6 +12,7 @@ export default class Busqueda extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
     handleChange(event) {
         this.setState({value: event.target.value});
       }
@@ -20,26 +21,27 @@ export default class Busqueda extends Component {
         alert('A name was submitted: ' + this.state.value);
         event.preventDefault();
     }
+
     render(){
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <br />
-                    <h5 className="textoBusqueda">Buscar donantes compatibles con donaciones disponibles.</h5>
-                    <br />
-                    <h5 className="textoBusqueda">Tipo de sangre del paciente a recibir la donación:</h5>
-                    <select name="tipoSangre" id="tipoSangre" className="form-control">
-                        <option value="O-">O-</option>
-                        <option value="O+">O+</option>
-                        <option value="A-">A-</option>
-                        <option value="A+">A+</option>
-                        <option value="B-">B-</option>
-                        <option value="B+">B+</option>
-                        <option value="AB-">AB-</option>
-                        <option value="AB+">AB+</option>
-                    </select>
-                    <br />
-                    <input type="submit" value="Buscar" onChange={this.handleChange} />
+                <h5 className="textoBusqueda">Buscar donantes compatibles con donaciones disponibles.</h5>
+                <br />
+                <form onSubmit={this.handleSubmit}>     
+                    <label>           
+                        Tipo de sangre del paciente a recibir la donación:
+                        <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+                            <option value="O-">O-</option>
+                            <option value="O+">O+</option>
+                            <option value="A-">A-</option>
+                            <option value="A+">A+</option>
+                            <option value="B-">B-</option>
+                            <option value="B+">B+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="AB+">AB+</option>
+                        </select>
+                    </label>
+                    <input type="submit" value="Buscar" />
                 </form>
             </div>
         )
