@@ -6,7 +6,7 @@ var donantes;
 export default class Busqueda extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: 'A+'};
+        this.state = {value: 'O-'};
         donantes = this.props.donantesFromParent.donantes;
     
         this.handleChange = this.handleChange.bind(this);
@@ -14,11 +14,14 @@ export default class Busqueda extends Component {
     }
 
     handleChange(event) {
+        console.log("estado previo: " + this.state.value);
         this.setState({value: event.target.value});
+        console.log("nuevo estado: " + this.state.value);
       }
   
     handleSubmit(event) {
         var str = "";
+        console.log("estado que llega a submit: " + this.state.value);
         str = this.buscarDonantesCompatibles(this.state.value, str);
         alert(str);
         event.preventDefault();

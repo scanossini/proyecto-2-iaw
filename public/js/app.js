@@ -66026,7 +66026,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      value: 'A+'
+      value: 'O-'
     };
     donantes = _this.props.donantesFromParent.donantes;
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
@@ -66037,14 +66037,17 @@ var Busqueda = /*#__PURE__*/function (_Component) {
   _createClass(Busqueda, [{
     key: "handleChange",
     value: function handleChange(event) {
+      console.log("estado previo: " + this.state.value);
       this.setState({
         value: event.target.value
       });
+      console.log("nuevo estado: " + this.state.value);
     }
   }, {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       var str = "";
+      console.log("estado que llega a submit: " + this.state.value);
       str = this.buscarDonantesCompatibles(this.state.value, str);
       alert(str);
       event.preventDefault();
