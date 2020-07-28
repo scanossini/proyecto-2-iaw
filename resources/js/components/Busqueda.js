@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-
 export default class Busqueda extends Component {
     constructor(props) {
         super(props);
         this.state = {value: 'O-'};
-        donantes = this.props.donantesFromParent.donantes;
+        var donantes = this.props.donantesFromParent.donantes;
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
