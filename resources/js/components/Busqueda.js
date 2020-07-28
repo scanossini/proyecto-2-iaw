@@ -26,6 +26,7 @@ export default class Busqueda extends Component {
 
     buscarDonantesCompatibles(tipoSangre, str){
         var compatibles = [];
+        var i;
         compatibles = this.sangreCompatible(tipoSangre, compatibles);
         for(i=0; i<compatibles.length; i++){
             str = compatibles[i] + " ";

@@ -66053,6 +66053,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
     key: "buscarDonantesCompatibles",
     value: function buscarDonantesCompatibles(tipoSangre, str) {
       var compatibles = [];
+      var i;
       compatibles = this.sangreCompatible(tipoSangre, compatibles);
 
       for (i = 0; i < compatibles.length; i++) {
