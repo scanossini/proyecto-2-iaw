@@ -5,7 +5,9 @@ export default class Busqueda extends Component {
     render(){
         return(
             <div>
-                <select name="tipoSangre" id="tipoSangre" className="form-control @error('tipoSangre') is-invalid @enderror">
+                Buscar donantes compatibles con donaciones disponibles
+                <br />
+                <select name="tipoSangre" id="tipoSangre" className="form-control">
                     <option value="O-">O-</option>
                     <option value="O+">O+</option>
                     <option value="A-">A-</option>
