@@ -34,6 +34,7 @@ export default class Busqueda extends Component {
         for(i = 0; i < compatibles.length; i++){
             str = compatibles[i] + " ";
         }
+        console.log("largo del arreglo compatibles: " + compatibles.length);
         return str;
     }
 

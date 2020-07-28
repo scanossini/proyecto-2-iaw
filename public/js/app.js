@@ -66063,6 +66063,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
         str = compatibles[i] + " ";
       }
 
+      console.log("largo del arreglo compatibles: " + compatibles.length);
       return str;
     }
   }, {
