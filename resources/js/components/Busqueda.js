@@ -20,6 +20,7 @@ export default class Busqueda extends Component {
     handleSubmit(event) {
         var tiposCompatibles = this.sangreCompatible(this.state.value);
         var str = "";
+        var i;
         for(i = 0; i < donantes.length; i++){
             if(donantes[i].donacionesDisp > 0){
                 if(tiposCompatibles.includes(donantes[i].tipoSangre))

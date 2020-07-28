@@ -66046,6 +66046,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
     value: function handleSubmit(event) {
       var tiposCompatibles = this.sangreCompatible(this.state.value);
       var str = "";
+      var i;
 
       for (i = 0; i < donantes.length; i++) {
         if (donantes[i].donacionesDisp > 0) {
