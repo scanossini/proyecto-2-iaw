@@ -65924,8 +65924,6 @@ var App = /*#__PURE__*/function (_Component) {
       donantes: []
     });
 
-    _defineProperty(_assertThisInitialized(_this), "value", _this.state.donantes);
-
     return _this;
   }
 
@@ -65950,7 +65948,7 @@ var App = /*#__PURE__*/function (_Component) {
     }
   }, {
     key: "render",
-    value: function render(value) {
+    value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "ulStyle"
       }, this.state.donantes.map(function (item, index) {
@@ -65963,7 +65961,7 @@ var App = /*#__PURE__*/function (_Component) {
           alt: ""
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Busqueda__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        donantesFromParent: value
+        donantesFromParent: this.state.donantes
       })));
     }
   }]);
