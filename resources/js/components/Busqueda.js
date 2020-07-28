@@ -6,7 +6,7 @@ var donantes;
 export default class Busqueda extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {value: 'O-'};
         donantes = this.props.donantesFromParent.donantes;
     
         this.handleChange = this.handleChange.bind(this);
