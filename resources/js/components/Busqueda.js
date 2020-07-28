@@ -24,6 +24,31 @@ export default class Busqueda extends Component {
         event.preventDefault();
     }
 
+   
+    render(){
+        return(
+            <div>
+                <h5 className="textoBusqueda">Buscar donantes compatibles con donaciones disponibles.</h5>
+                <br />
+                <form onSubmit={this.handleSubmit} className="textoBusqueda">     
+                    <label>           
+                        Tipo de sangre del paciente a recibir la donación:
+                        <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+                            <option value="O-">O-</option>
+                            <option value="O+">O+</option>
+                            <option value="A-">A-</option>
+                            <option value="A+">A+</option>
+                            <option value="B-">B-</option>
+                            <option value="B+">B+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="AB+">AB+</option>
+                        </select>
+                    </label>
+                    <input type="submit" value="Buscar" />
+                </form>
+            </div>
+        )
+    }
     buscarDonantesCompatibles(tipoSangre, str){
         var compatibles = [];
         compatibles = this.sangreCompatible(tipoSangre, compatibles);
@@ -61,30 +86,5 @@ export default class Busqueda extends Component {
                 break;
         }
         return arr;
-    }
-
-    render(){
-        return(
-            <div>
-                <h5 className="textoBusqueda">Buscar donantes compatibles con donaciones disponibles.</h5>
-                <br />
-                <form onSubmit={this.handleSubmit} className="textoBusqueda">     
-                    <label>           
-                        Tipo de sangre del paciente a recibir la donación:
-                        <select className="form-control" value={this.state.value} onChange={this.handleChange}>
-                            <option value="O-">O-</option>
-                            <option value="O+">O+</option>
-                            <option value="A-">A-</option>
-                            <option value="A+">A+</option>
-                            <option value="B-">B-</option>
-                            <option value="B+">B+</option>
-                            <option value="AB-">AB-</option>
-                            <option value="AB+">AB+</option>
-                        </select>
-                    </label>
-                    <input type="submit" value="Buscar" />
-                </form>
-            </div>
-        )
     }
 }
