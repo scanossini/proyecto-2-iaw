@@ -66045,7 +66045,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       var str = "";
-      str = buscarDonantesCompatibles(this.state.value);
+      str = buscarDonantesCompatibles(this.state.value, str);
       alert(str);
       event.preventDefault();
     }

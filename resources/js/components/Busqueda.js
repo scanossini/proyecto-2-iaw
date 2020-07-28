@@ -19,7 +19,7 @@ export default class Busqueda extends Component {
   
     handleSubmit(event) {
         var str = "";
-        str = buscarDonantesCompatibles(this.state.value);
+        str = buscarDonantesCompatibles(this.state.value, str);
         alert(str);
         event.preventDefault();
     }
