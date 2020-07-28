@@ -66037,6 +66037,13 @@ var Busqueda = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(Busqueda, [{
+    key: "handleChange",
+    value: function handleChange(event) {
+      this.setState({
+        value: event.target.value
+      });
+    }
+  }, {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       alert('A name was submitted: ' + this.state.value);
