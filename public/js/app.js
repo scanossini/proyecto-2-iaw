@@ -66012,7 +66012,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var donantes;
 
 var Busqueda = /*#__PURE__*/function (_Component) {
   _inherits(Busqueda, _Component);
