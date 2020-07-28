@@ -27,8 +27,8 @@ export default class Busqueda extends Component {
             <div>
                 <h5 className="textoBusqueda">Buscar donantes compatibles con donaciones disponibles.</h5>
                 <br />
-                <form onSubmit={this.handleSubmit}>     
-                    <label className="textoBusqueda">           
+                <form onSubmit={this.handleSubmit} className="textoBusqueda">     
+                    <label>           
                         Tipo de sangre del paciente a recibir la donación:
                         <select className="form-control" value={this.state.value} onChange={this.handleChange}>
                             <option value="O-">O-</option>
