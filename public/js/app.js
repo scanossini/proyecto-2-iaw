@@ -65896,8 +65896,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var API_URL = 'https://proyecto-2-iaw.herokuapp.com';
-var value;
+var API_URL = 'https://proyecto-2-iaw.herokuapp.com'; //var value;
+
 var photoStyle = {
   width: '100x',
   height: '100px',
@@ -65945,8 +65945,7 @@ var App = /*#__PURE__*/function (_Component) {
         _this2.setState({
           donantes: data
         });
-      });
-      value = this.state.donantes;
+      }); //value = this.state.donantes;
     }
   }, {
     key: "render",
@@ -65963,7 +65962,7 @@ var App = /*#__PURE__*/function (_Component) {
           alt: ""
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Busqueda__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        donantesFromParent: this.value
+        donantesFromParent: this.donantes
       })));
     }
   }]);

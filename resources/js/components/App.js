@@ -4,7 +4,7 @@ import axios from 'axios'
 import Busqueda from './Busqueda'
 
 const API_URL = 'https://proyecto-2-iaw.herokuapp.com';
-var value;
+//var value;
 
 const photoStyle = {
   width: '100x',
@@ -30,7 +30,7 @@ export default class App extends Component {
       .then((data) => {
           this.setState({ donantes: data })
       })
-      value = this.state.donantes;
+      //value = this.state.donantes;
   }
   render() {  
       return (
@@ -51,7 +51,7 @@ export default class App extends Component {
             )}
           </ul>
           <div>
-            <Busqueda donantesFromParent={this.value}/>
+            <Busqueda donantesFromParent={this.donantes}/>
           </div>
         </div>
       );
