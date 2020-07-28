@@ -6,7 +6,7 @@ var donantes;
 export default class Busqueda extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: 'O-'};
+        this.state = {value: 'A+'};
         donantes = this.props.donantesFromParent.donantes;
     
         this.handleChange = this.handleChange.bind(this);
@@ -28,7 +28,7 @@ export default class Busqueda extends Component {
         var compatibles = [];
         var i;
         compatibles = this.sangreCompatible(tipoSangre, compatibles);
-        for(i=0; i<compatibles.length; i++){
+        for(i = 0; i < compatibles.length; i++){
             str = compatibles[i] + " ";
         }
         return str;
