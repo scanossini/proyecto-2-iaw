@@ -18,24 +18,20 @@ export default class Busqueda extends Component {
       }
   
     handleSubmit(event) {
-        var tiposCompatibles = [];
-        tiposCompatibles = this.sangreCompatible(this.state.value, tiposCompatibles);
-        var i;
+        var tiposCompatibles = this.sangreCompatible(this.state.value);
         var str = "";
-        for(i = 0; i < tiposCompatibles.length; i++){
-            str = str + tiposCompatibles[i] + " ";
+        for(i = 0; i < donantes.length; i++){
+            if(donantes[i].donacionesDisp > 0){
+                if(tiposCompatibles.includes(donantes[i].tipoSangre))
+                    str = str + donantes[i].nombre + " ";
+            }
         }
         alert(str);
         event.preventDefault();
     }
 
-    /*buscarDonantesCompatibles(tipoSangre){
-        var compatibles = [];
-        compatibles = this.sangreCompatible(tipoSangre, compatibles);
-        return compatibles;
-    }*/
-
-    sangreCompatible(tipoSangre, arr){
+    sangreCompatible(tipoSangre){
+        var arr = [];
         switch(tipoSangre){
             case 'A+':
                 arr = ['A+', 'A-', 'O+', 'O-'];
