@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 
 export default class Busqueda extends Component {
 
@@ -13,7 +12,7 @@ export default class Busqueda extends Component {
 
     handleChange(event) {
         this.setState({value: event.target.value});
-      }
+    }
   
     handleSubmit(event) {
         var tiposCompatibles = this.sangreCompatible(this.state.value);
@@ -26,8 +25,7 @@ export default class Busqueda extends Component {
             }
         }
         if(arr.length > 0){
-            this.setState({hayResultados: 'true'});
-            this.setState({arrResult: arr});
+            this.setState({hayResultados: 'true', arrResult: arr});
         }
     }
 
@@ -67,7 +65,7 @@ export default class Busqueda extends Component {
         let divResult;
         if(hayResultados == 'true'){
             divResult = (
-                <ul className="ulStyle">
+                <ul>
                     {this.state.arrResult.map(function(item, index) {
                     return(
                         <div key={index}>
