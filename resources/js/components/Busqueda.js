@@ -5,7 +5,7 @@ export default class Busqueda extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {value: 'O-', hayResultados: 'false'};
+        this.state = {value: 'O-', hayResultados: 'false', arrResult: []};
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,8 +25,10 @@ export default class Busqueda extends Component {
                     arr.push(this.props.donantesFromParent.donantes[i].nombre);
             }
         }
-        if(arr.length > 0)
+        if(arr.length > 0){
             this.setState({hayResultados: 'true'});
+            this.setState({arrResult: arr});
+        }
     }
 
     sangreCompatible(tipoSangre){
@@ -66,7 +68,7 @@ export default class Busqueda extends Component {
         if(hayResultados == 'true'){
             divResult = (
                 <ul className="ulStyle">
-                    {arr.map(function(item, index) {
+                    {this.state.arrResult.map(function(item, index) {
                     return(
                         <div key={index}>
                         <h5>{item}</h5>

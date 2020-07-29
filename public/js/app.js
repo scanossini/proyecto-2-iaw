@@ -66026,7 +66026,8 @@ var Busqueda = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
     _this.state = {
       value: 'O-',
-      hayResultados: 'false'
+      hayResultados: 'false',
+      arrResult: []
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -66053,9 +66054,14 @@ var Busqueda = /*#__PURE__*/function (_Component) {
         }
       }
 
-      if (arr.length > 0) this.setState({
-        hayResultados: 'true'
-      });
+      if (arr.length > 0) {
+        this.setState({
+          hayResultados: 'true'
+        });
+        this.setState({
+          arrResult: arr
+        });
+      }
     }
   }, {
     key: "sangreCompatible",
@@ -66107,7 +66113,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
       if (hayResultados == 'true') {
         divResult = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "ulStyle"
-        }, arr.map(function (item, index) {
+        }, this.state.arrResult.map(function (item, index) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             key: index
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, item), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
