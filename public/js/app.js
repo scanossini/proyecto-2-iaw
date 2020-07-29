@@ -66028,7 +66028,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
     _this.state = {
       value: 'O-'
     };
-    _this.donantes = _this.props.donantesFromParent.donantes;
+    donantes = _this.props.donantesFromParent.donantes;
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
