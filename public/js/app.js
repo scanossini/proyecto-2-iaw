@@ -66044,16 +66044,16 @@ var Busqueda = /*#__PURE__*/function (_Component) {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       var tiposCompatibles = this.sangreCompatible(this.state.value);
-      var str = "";
+      var arr = [];
       var i;
 
       for (i = 0; i < this.props.donantesFromParent.donantes.length; i++) {
         if (this.props.donantesFromParent.donantes[i].donacionesDisp > 0) {
-          if (tiposCompatibles.includes(this.props.donantesFromParent.donantes[i].tipoSangre)) str = str + this.props.donantesFromParent.donantes[i].nombre + " ";
+          if (tiposCompatibles.includes(this.props.donantesFromParent.donantes[i].tipoSangre)) arr.push(this.props.donantesFromParent.donantes[i].nombre);
         }
       }
 
-      alert(str);
+      alert(JSON.stringify(arr));
       event.preventDefault();
     }
   }, {
