@@ -66049,12 +66049,12 @@ var Busqueda = /*#__PURE__*/function (_Component) {
       var i;
 
       for (i = 0; i < donantes.length; i++) {
-        if (this.donantes[i].donacionesDisp > 0) {
-          if (tiposCompatibles.includes(this.donantes[i].tipoSangre)) str = str + this.donantes[i].nombre + " ";
+        if (donantes[i].donacionesDisp > 0) {
+          if (tiposCompatibles.includes(donantes[i].tipoSangre)) str = str + donantes[i].nombre + " ";
         }
       }
 
-      alert(this.donantes[0].nombre + " " + this.donantes[0].donacionesDisp + " " + this.donantes[0].tipoSangre);
+      alert(donantes[0].nombre + " " + donantes[0].donacionesDisp + " " + donantes[0].tipoSangre);
       event.preventDefault();
     }
   }, {
