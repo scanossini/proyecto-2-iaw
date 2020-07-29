@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-//var donantes;
 
 export default class Busqueda extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {value: 'O-'};
-        //donantes = this.props.donantesFromParent.donantes;
+        this.state = {value: 'O-', hayResultados: 'false'};
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,8 +25,7 @@ export default class Busqueda extends Component {
                     arr.push(this.props.donantesFromParent.donantes[i].nombre);
             }
         }
-        alert(JSON.stringify(arr));
-        event.preventDefault();
+        resultadoBusqueda(arr);
     }
 
     sangreCompatible(tipoSangre){
@@ -62,7 +59,28 @@ export default class Busqueda extends Component {
         return arr;
     }
 
+    resultadoBusqueda(arr){
+        this.state.hayResultados = 'true';
+        divResult = (
+            <ul className="ulStyle">
+                {arr.map(function(item, index) {
+                return(
+                    <div key={index}>
+                    <h5>{item}</h5>
+                    <br />
+                    </div>
+                )
+                })}
+            </ul>
+        );
+        return divResult;
+    }
+
     render(){
+        const hayResultados = this.state.hayResultados;
+        let divResult;
+        if(hayResultados = 'false')
+            divResult = <br />;
         return(
             <div>
                 <h5 className="textoBusqueda">Buscar donantes compatibles con donaciones disponibles.</h5>
