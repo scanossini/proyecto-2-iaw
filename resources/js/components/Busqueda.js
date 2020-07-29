@@ -25,7 +25,8 @@ export default class Busqueda extends Component {
                     arr.push(this.props.donantesFromParent.donantes[i].nombre);
             }
         }
-        this.state.hayResultados = 'true';
+        if(arr.length > 0)
+            this.setState({hayResultados: 'true'});
     }
 
     sangreCompatible(tipoSangre){

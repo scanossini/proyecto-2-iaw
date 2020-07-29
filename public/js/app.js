@@ -66053,7 +66053,9 @@ var Busqueda = /*#__PURE__*/function (_Component) {
         }
       }
 
-      this.state.hayResultados = 'true';
+      if (arr.length > 0) this.setState({
+        hayResultados: 'true'
+      });
     }
   }, {
     key: "sangreCompatible",
