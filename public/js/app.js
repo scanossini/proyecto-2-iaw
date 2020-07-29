@@ -66012,6 +66012,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+var donantes;
 
 var Busqueda = /*#__PURE__*/function (_Component) {
   _inherits(Busqueda, _Component);
@@ -66027,7 +66028,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
     _this.state = {
       value: 'O-'
     };
-    var donantes = _this.props.donantesFromParent.donantes;
+    _this.donantes = _this.props.donantesFromParent.donantes;
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
@@ -66047,13 +66048,13 @@ var Busqueda = /*#__PURE__*/function (_Component) {
       var str = "";
       var i;
 
-      for (i = 0; i < donantes.length; i++) {
-        if (donantes[i].donacionesDisp > 0) {
-          if (tiposCompatibles.includes(donantes[i].tipoSangre)) str = str + donantes[i].nombre + " ";
+      for (i = 0; i < this.donantes.length; i++) {
+        if (this.donantes[i].donacionesDisp > 0) {
+          if (tiposCompatibles.includes(this.donantes[i].tipoSangre)) str = str + this.donantes[i].nombre + " ";
         }
       }
 
-      alert(donantes[0].nombre + " " + donantes[0].donacionesDisp + " " + donantes[0].tipoSangre);
+      alert(this.donantes[0].nombre + " " + this.donantes[0].donacionesDisp + " " + this.donantes[0].tipoSangre);
       event.preventDefault();
     }
   }, {
