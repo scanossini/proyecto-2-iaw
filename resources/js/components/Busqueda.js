@@ -79,7 +79,7 @@ export default class Busqueda extends Component {
     render(){
         const hayResultados = this.state.hayResultados;
         let divResult;
-        if(hayResultados = 'false')
+        if(hayResultados == 'false')
             divResult = <br />;
         return(
             <div>
