@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-var donantes;
+//var donantes;
 
 export default class Busqueda extends Component {
 
     constructor(props) {
         super(props);
         this.state = {value: 'O-'};
-        donantes = this.props.donantesFromParent.donantes;
+        //donantes = this.props.donantesFromParent.donantes;
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,13 +21,13 @@ export default class Busqueda extends Component {
         var tiposCompatibles = this.sangreCompatible(this.state.value);
         var str = "";
         var i;
-        for(i = 0; i < donantes.length; i++){
-            if(donantes[i].donacionesDisp > 0){
-                if(tiposCompatibles.includes(donantes[i].tipoSangre))
-                    str = str + donantes[i].nombre + " ";
+        for(i = 0; i < this.props.donantesFromParent.donantes.length; i++){
+            if(this.props.donantesFromParent.donantes[i].donacionesDisp > 0){
+                if(tiposCompatibles.includes(this.props.donantesFromParent.donantes[i].tipoSangre))
+                    str = str + this.props.donantesFromParent.donantes[i].nombre + " ";
             }
         }
-        alert((donantes[0]).nombre + " " + (donantes[0]).donacionesDisp + " " + (donantes[0]).tipoSangre);
+        alert((this.props.donantesFromParent.donantes[0]).nombre + " " + (this.props.donantesFromParent.donantes[0]).donacionesDisp + " " + (this.props.donantesFromParent.donantes[0]).tipoSangre);
         event.preventDefault();
     }
 

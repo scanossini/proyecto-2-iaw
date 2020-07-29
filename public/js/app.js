@@ -66011,8 +66011,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
-
-var donantes;
+ //var donantes;
 
 var Busqueda = /*#__PURE__*/function (_Component) {
   _inherits(Busqueda, _Component);
@@ -66027,8 +66026,8 @@ var Busqueda = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
     _this.state = {
       value: 'O-'
-    };
-    donantes = _this.props.donantesFromParent.donantes;
+    }; //donantes = this.props.donantesFromParent.donantes;
+
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
@@ -66048,13 +66047,13 @@ var Busqueda = /*#__PURE__*/function (_Component) {
       var str = "";
       var i;
 
-      for (i = 0; i < donantes.length; i++) {
-        if (donantes[i].donacionesDisp > 0) {
-          if (tiposCompatibles.includes(donantes[i].tipoSangre)) str = str + donantes[i].nombre + " ";
+      for (i = 0; i < this.props.donantesFromParent.donantes.length; i++) {
+        if (this.props.donantesFromParent.donantes[i].donacionesDisp > 0) {
+          if (tiposCompatibles.includes(this.props.donantesFromParent.donantes[i].tipoSangre)) str = str + this.props.donantesFromParent.donantes[i].nombre + " ";
         }
       }
 
-      alert(donantes[0].nombre + " " + donantes[0].donacionesDisp + " " + donantes[0].tipoSangre);
+      alert(this.props.donantesFromParent.donantes[0].nombre + " " + this.props.donantesFromParent.donantes[0].donacionesDisp + " " + this.props.donantesFromParent.donantes[0].tipoSangre);
       event.preventDefault();
     }
   }, {
