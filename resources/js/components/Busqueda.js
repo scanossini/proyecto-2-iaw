@@ -25,7 +25,7 @@ export default class Busqueda extends Component {
                     arr.push(this.props.donantesFromParent.donantes[i].nombre);
             }
         }
-        resultadoBusqueda(arr);
+        this.state.hayResultados = 'true';
     }
 
     sangreCompatible(tipoSangre){
@@ -59,27 +59,24 @@ export default class Busqueda extends Component {
         return arr;
     }
 
-    resultadoBusqueda(arr){
-        this.state.hayResultados = 'true';
-        divResult = (
-            <ul className="ulStyle">
-                {arr.map(function(item, index) {
-                return(
-                    <div key={index}>
-                    <h5>{item}</h5>
-                    <br />
-                    </div>
-                )
-                })}
-            </ul>
-        );
-        return divResult;
-    }
-
     render(){
         const hayResultados = this.state.hayResultados;
         let divResult;
-        if(hayResultados == 'false')
+        if(hayResultados == 'true'){
+            divResult = (
+                <ul className="ulStyle">
+                    {arr.map(function(item, index) {
+                    return(
+                        <div key={index}>
+                        <h5>{item}</h5>
+                        <br />
+                        </div>
+                    )
+                    })}
+                </ul>
+            );
+        }        
+        else
             divResult = <br />;
         return(
             <div>

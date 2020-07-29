@@ -66053,7 +66053,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
         }
       }
 
-      resultadoBusqueda(arr);
+      this.state.hayResultados = 'true';
     }
   }, {
     key: "sangreCompatible",
@@ -66097,24 +66097,21 @@ var Busqueda = /*#__PURE__*/function (_Component) {
       return arr;
     }
   }, {
-    key: "resultadoBusqueda",
-    value: function resultadoBusqueda(arr) {
-      this.state.hayResultados = 'true';
-      divResult = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "ulStyle"
-      }, arr.map(function (item, index) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          key: index
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, item), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
-      }));
-      return divResult;
-    }
-  }, {
     key: "render",
     value: function render() {
       var hayResultados = this.state.hayResultados;
       var divResult;
-      if (hayResultados == 'false') divResult = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null);
+
+      if (hayResultados == 'true') {
+        divResult = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "ulStyle"
+        }, arr.map(function (item, index) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            key: index
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, item), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+        }));
+      } else divResult = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null);
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         className: "textoBusqueda"
       }, "Buscar donantes compatibles con donaciones disponibles."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
