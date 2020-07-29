@@ -100,6 +100,7 @@ export default class Busqueda extends Component {
                         </select>
                     </label>
                     <input type="submit" value="Buscar" />
+                    {divResult}
                 </form>
             </div>
         )
