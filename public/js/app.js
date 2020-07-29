@@ -66048,7 +66048,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
       var str = "";
       var i;
 
-      for (i = 0; i < this.donantes.length; i++) {
+      for (i = 0; i < donantes.length; i++) {
         if (this.donantes[i].donacionesDisp > 0) {
           if (tiposCompatibles.includes(this.donantes[i].tipoSangre)) str = str + this.donantes[i].nombre + " ";
         }
