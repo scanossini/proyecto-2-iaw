@@ -27,7 +27,7 @@ export default class Busqueda extends Component {
                     str = str + this.props.donantesFromParent.donantes[i].nombre + " ";
             }
         }
-        alert((this.props.donantesFromParent.donantes[0]).nombre + " " + (this.props.donantesFromParent.donantes[0]).donacionesDisp + " " + (this.props.donantesFromParent.donantes[0]).tipoSangre);
+        alert(str);
         event.preventDefault();
     }
 

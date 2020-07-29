@@ -66053,7 +66053,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
         }
       }
 
-      alert(this.props.donantesFromParent.donantes[0].nombre + " " + this.props.donantesFromParent.donantes[0].donacionesDisp + " " + this.props.donantesFromParent.donantes[0].tipoSangre);
+      alert(str);
       event.preventDefault();
     }
   }, {
