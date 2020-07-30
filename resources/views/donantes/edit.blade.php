@@ -22,7 +22,7 @@
                             <div class="form-group row">
                                 <label for="edad" class="col-md-2 col-form-label text-md-right">Edad</label>
                                 <div class="col-md-6">
-                                    <input id="edad" type="number" class="form-control @error('edad') is-invalid @enderror" name="edad" value="{{ $donante->edad }}" required> 
+                                    <input id="edad" type="number" class="form-control @error('edad') is-invalid @enderror" min="16" name="edad" value="{{ $donante->edad }}" required> 
                                     @error('edad')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -48,18 +48,22 @@
                             <div class="form-group row">
                                 <label for="tipoSangre" class="col-md-2 col-form-label text-md-right">Tipo de Sangre</label>
                                 <div class="col-md-6">
-                                    <input id="tipoSangre" type="text" class="form-control @error('tipoSangre') is-invalid @enderror" name="tipoSangre" value="{{ $donante->tipoSangre }}" required> 
-                                    @error('tipoSangre')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
+                                    <select name="tipoSangre" id="tipoSangre" class="form-control @error('tipoSangre') is-invalid @enderror" required>
+                                            <option value="O-">O-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="A+">A+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="AB+">AB+</option>
+                                        </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="donacionesDisp" class="col-md-2 col-form-label text-md-right">Donaciones Disponibles</label>
                                 <div class="col-md-6">
-                                    <input id="donacionesDisp" type="number" class="form-control @error('donacionesDisp') is-invalid @enderror" name="donacionesDisp" value="{{ $donante->donacionesDisp }}" required> 
+                                    <input id="donacionesDisp" type="number" min="0" class="form-control @error('donacionesDisp') is-invalid @enderror" name="donacionesDisp" value="{{ $donante->donacionesDisp }}" required> 
                                     @error('donacionesDisp')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

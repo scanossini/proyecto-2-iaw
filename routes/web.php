@@ -21,6 +21,8 @@ Route::view('/', 'home')->middleware('auth');
 
 Route::view('home', 'home')->middleware('auth');
 
+Route::view('/spa', 'spa')->middleware('auth');
+
 Route::get('logout', 'LoginController@logout');
 
 Route::get('/readme', function () {
