@@ -66057,6 +66057,8 @@ var Busqueda = /*#__PURE__*/function (_Component) {
           arrResult: arr
         });
       }
+
+      event.preventDefault();
     }
   }, {
     key: "sangreCompatible",
@@ -66111,7 +66113,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
             key: index
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, item), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
         }));
-      } else divResult = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null);
+      } else divResult = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         className: "textoBusqueda"

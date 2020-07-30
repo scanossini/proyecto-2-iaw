@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export default class Busqueda extends Component {
-
+ 
     constructor(props) {
         super(props);
         this.state = {value: 'O-', hayResultados: 'false', arrResult: []};
@@ -27,6 +27,7 @@ export default class Busqueda extends Component {
         if(arr.length > 0){
             this.setState({hayResultados: 'true', arrResult: arr});
         }
+        event.preventDefault();
     }
 
     sangreCompatible(tipoSangre){
@@ -69,8 +70,8 @@ export default class Busqueda extends Component {
                     {this.state.arrResult.map(function(item, index) {
                     return(
                         <div key={index}>
-                        <h5>{item}</h5>
-                        <br />
+                            <h5>{item}</h5>
+                            <br />
                         </div>
                     )
                     })}
@@ -78,7 +79,7 @@ export default class Busqueda extends Component {
             );
         }        
         else
-            divResult = <br />;
+            divResult = (<div></div>);
         return(
             <div>
                 <h5 className="textoBusqueda">Buscar donantes compatibles con donaciones disponibles.</h5>
