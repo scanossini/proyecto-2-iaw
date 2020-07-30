@@ -69,10 +69,9 @@ export default class Busqueda extends Component {
                 <ul> Donantes compatibles: <br />
                     {this.state.arrResult.map(function(item, index) {
                     return(
-                        <div key={index}>
-                            <h5>{item}</h5>
-                            <br />
-                        </div>
+                        <li key={index}>
+                            {item}
+                        </li>
                     )
                     })}
                 </ul>
