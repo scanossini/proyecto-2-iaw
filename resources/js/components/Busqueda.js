@@ -27,6 +27,8 @@ export default class Busqueda extends Component {
         if(arr.length > 0){
             this.setState({hayResultados: 'true', arrResult: arr});
         }
+        else
+            this.setState({hayResultados: 'false'});
         event.preventDefault();
     }
 

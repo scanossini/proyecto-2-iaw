@@ -66056,7 +66056,9 @@ var Busqueda = /*#__PURE__*/function (_Component) {
           hayResultados: 'true',
           arrResult: arr
         });
-      }
+      } else this.setState({
+        hayResultados: 'false'
+      });
 
       event.preventDefault();
     }
