@@ -66,7 +66,7 @@ export default class Busqueda extends Component {
         let divResult;
         if(hayResultados == 'true'){
             divResult = (
-                <ul> Donantes compatibles: <br />
+                <ul className="ulStyle"> Donantes compatibles: <br /> <br />
                     {this.state.arrResult.map(function(item, index) {
                     return(
                         <li key={index}>
