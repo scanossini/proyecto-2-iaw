@@ -71,7 +71,7 @@ export default class Busqueda extends Component {
                     <ul className="ulStyle">
                         {this.state.arrResult.map(function(item, index) {
                         return(
-                            <li key={index}>
+                            <li className="customLi" key={index}>
                                 {item}
                             </li>
                         )

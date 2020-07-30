@@ -66114,6 +66114,7 @@ var Busqueda = /*#__PURE__*/function (_Component) {
           className: "ulStyle"
         }, this.state.arrResult.map(function (item, index) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+            className: "customLi",
             key: index
           }, item);
         })));

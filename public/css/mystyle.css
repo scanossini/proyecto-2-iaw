@@ -98,6 +98,7 @@
     text-align: center;
   }
 
-  .form-check-label{
-    margin-left: 5px;
+  .customLi{
+    display: block;
+    float: left;
   }
