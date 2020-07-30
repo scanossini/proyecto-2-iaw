@@ -65,7 +65,7 @@
                             <div class="form-group row">
                                 <label for="foto" class="col-md-2 col-form-label text-md-right">Foto</label>
                                 <div class="col-md-6">
-                                    <input id="foto" type="file" class="form-control @error('foto') is-invalid @enderror" name="foto" required>
+                                    <input id="foto" type="file" class="form-control @error('foto') is-invalid @enderror" name="foto">
                                 </div>
                             </div>
                                 @csrf
