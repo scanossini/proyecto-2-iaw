@@ -66,7 +66,7 @@ export default class Busqueda extends Component {
         let divResult;
         if(hayResultados == 'true'){
             divResult = (
-                <ul>
+                <ul> Donantes compatibles: <br />
                     {this.state.arrResult.map(function(item, index) {
                     return(
                         <div key={index}>
@@ -82,7 +82,8 @@ export default class Busqueda extends Component {
             divResult = (<div></div>);
         return(
             <div>
-                <h5 className="textoBusqueda">Buscar donantes compatibles con donaciones disponibles.</h5>
+                <h5 className="textoBusqueda">Buscar un donante <br /> (además de un tipo de sangre compatible 
+                debe tener donaciones disponibles).</h5>
                 <br />
                 <form onSubmit={this.handleSubmit} className="textoBusqueda">     
                     <label>           
